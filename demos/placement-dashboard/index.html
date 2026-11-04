@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Privacy-safe placement task dashboard demonstration using fictional data and browser-only storage.">
+<title>Placement Dashboard | Portfolio Demo</title>
+<style>
+:root{font:16px/1.6 system-ui,-apple-system,Segoe UI,sans-serif;color:#172d3b;background:#f4f7fa}*{box-sizing:border-box}body{margin:0}a{color:inherit}button,input,textarea,select{font:inherit}button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid #45ac99;outline-offset:2px}.wrap{max-width:1120px;margin:auto;padding:0 22px}.top{background:#102936;color:#f4faf8}.nav{min-height:60px;display:flex;justify-content:space-between;align-items:center;gap:20px}.nav b{letter-spacing:.07em;font-size:13px}.nav b span{color:#72e1c4}.nav a{text-decoration:none;color:#d2e9e5;font-size:13px}.hero{padding:48px 0 45px;background:#102936;color:white}.hero .eyebrow{color:#83dbc5;font:700 12px ui-monospace,monospace;letter-spacing:.09em}.hero h1{font-size:clamp(38px,5vw,60px);letter-spacing:-.05em;line-height:1.1;margin:15px 0}.hero p{color:#afc9d0;max-width:710px}.notice{background:#e5f7ef;border:1px solid #aadcca;border-radius:9px;padding:17px 20px;display:flex;align-items:center;justify-content:space-between;gap:15px;margin:22px 0;color:#205446}.notice p{margin:4px 0 0;font-size:13px}.notice strong{font-size:14px}.button{border:0;border-radius:7px;padding:9px 15px;cursor:pointer;background:#177e68;color:#fff;font-weight:700;font-size:13px}.button.secondary{background:white;color:#375a69;border:1px solid #bed0d7}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:20px}.stat,.panel{background:#fff;border:1px solid #dae6eb;border-radius:9px;padding:20px}.stat span{font-size:12px;color:#617887}.stat strong{display:block;font-size:31px;letter-spacing:-.04em}.cols{display:grid;grid-template-columns:.92fr 1.08fr;gap:16px}.panel h2{margin:0;font-size:23px;letter-spacing:-.03em}.muted{color:#697f8c;font-size:13px;margin:4px 0 23px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{font-size:13px;font-weight:700;display:block;margin-bottom:13px}.field input,.field textarea,.field select{display:block;margin-top:7px;background:white;color:#193b49;width:100%;border-radius:6px;padding:9px;border:1px solid #cad9e1;font-weight:400}.field textarea{min-height:72px;resize:vertical}.skills{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin:10px 0 20px}.skills label{font-size:12px;color:#49636f}.skills input{accent-color:#177e68}.entry{border:1px solid #dfebef;background:#fbfdfe;border-radius:8px;padding:15px;margin-bottom:12px}.entry h3{font-size:16px;line-height:1.35;margin:0}.entry .meta{font-size:12px;color:#657f8a;margin:4px 0}.label{display:inline-block;border-radius:30px;background:#e4f4ed;color:#236b55;font-size:11px;font-weight:700;padding:3px 9px;margin:6px 0}.reflections{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:11px 0}.reflections div{background:#f0f5f7;border-radius:4px;padding:9px;min-width:0}.reflections b{display:block;font:700 10px ui-monospace,monospace;color:#3c6974}.reflections p{white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px;color:#506773;margin:6px 0 0}.tags{display:flex;gap:5px;flex-wrap:wrap}.tags span{font-size:10px;padding:3px 6px;background:#e7f5f2;border:1px solid #c7e2db;border-radius:3px;color:#396c61}.entry-actions{display:flex;gap:8px;margin-top:11px}.entry-actions button{background:white;border:1px solid #c5d8df;border-radius:4px;padding:5px 9px;font-size:12px;cursor:pointer;color:#345c67}.entry-actions .danger{color:#aa4343}.footer{margin-top:40px;border-top:1px solid #dbe8ee;padding:20px 0;font-size:12px;color:#67808a}#error{color:#a73f3f;font-size:13px}@media(max-width:900px){.stats{grid-template-columns:repeat(2,1fr)}.cols{grid-template-columns:1fr}}@media(max-width:520px){.wrap{padding:0 16px}.notice{display:block}.notice button{margin-top:10px}.reflections{grid-template-columns:1fr}.panel{padding:16px}.skills{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<header class="top"><nav class="wrap nav"><b>DK<span>.</span> / DEVIN KALANSURIYA</b><a href="../../industry-projects.html#dashboard">← Project case study</a></nav></header>
+<section class="hero"><div class="wrap"><span class="eyebrow">CLOUDVANTAGE PLACEMENT · SAFE INTERACTIVE DEMONSTRATION</span><h1>Placement Task Dashboard<span style="color:#74dfc2">.</span></h1><p>Explore task tracking, hour totals, skills and reflections. The original project used React, Python Azure Functions, Azure Table Storage and Terraform.</p></div></section>
+<main class="wrap">
+<div class="notice"><div><strong>Demo only. No connection to Azure.</strong><p>All starting tasks are fictional. Changes are saved in this browser, not sent to any server.</p></div><button type="button" class="button" id="reset">Reset sample data</button></div>
+<section class="stats" aria-label="Demo statistics"><div class="stat"><span>Total recorded hours</span><strong id="hours">0</strong></div><div class="stat"><span>Completed tasks</span><strong id="completed">0</strong></div><div class="stat"><span>Total activities</span><strong id="count">0</strong></div><div class="stat"><span>100-hour progress</span><strong id="progress">0%</strong></div></section>
+<div class="cols">
+<section class="panel"><h2 id="formHeading">Add demo task</h2><p class="muted">The original React form connected to a persistent Azure API. This public preview stores synthetic data locally.</p><p id="error" role="alert"></p>
+<form id="taskForm">
+<div class="form-grid"><label class="field">Date<input type="date" name="date" required></label><label class="field">Hours<input type="number" name="hours" min=".25" max="24" step=".25" value="1" required></label></div>
+<label class="field">Task title<input type="text" name="title" maxlength="100" required></label>
+<div class="form-grid"><label class="field">Category<select name="category"><option>Azure / Cloud</option><option>Security Improvement</option><option>Technical Support</option><option>Other</option></select></label><label class="field">Status<select name="status"><option>Completed</option><option>In Progress</option><option>Planned</option></select></label></div>
+<label class="field">WHAT did you do?<textarea name="what" maxlength="1000" required></textarea></label><label class="field">SO WHAT did you learn?<textarea name="soWhat" maxlength="1000"></textarea></label><label class="field">NOW WHAT is next?<textarea name="nowWhat" maxlength="1000"></textarea></label>
+<strong style="font-size:13px">Skill mapping</strong><div class="skills" id="skills"></div>
+<button type="submit" class="button" id="save">Save task</button> <button type="button" class="button secondary" id="cancel" hidden>Cancel editing</button>
+</form></section>
+<section class="panel"><h2>Placement log</h2><p class="muted">Fictional examples showing the reflective logbook format.</p><div id="entries" aria-live="polite"></div></section>
+</div><p class="footer">Static portfolio recreation for demonstration, based on the original Azure dashboard. No company data, live credentials or real placement notes are included.</p>
+</main>
+<script>
+(function(){
+"use strict";
+var KEY="dk-demo-dashboard-public-v1";
+var SKILLS=["Technical Literacy","Technical Impact","Ethical Obligations","Professional Standards","Professional Communication","Technical Writing and Documentation","Problem Analysis and Research","Teamwork and Collaboration","Adaptability"];
+var sample=[
+{id:"demo-1",date:"2026-01-05",hours:2.5,title:"Review virtual network access (fictional)",category:"Azure / Cloud",status:"Completed",what:"Plan a sample VM, subnet and network security rule.",soWhat:"Restricting management ports reduces exposure.",nowWhat:"Check the fictional audit log.",skills:["Technical Literacy"]},
+{id:"demo-2",date:"2026-01-07",hours:1.75,title:"Explore security logs (fictional)",category:"Security Improvement",status:"In Progress",what:"Draft questions for synthetic Windows events.",soWhat:"Investigations need clear log questions.",nowWhat:"Test queries against demo records.",skills:["Problem Analysis and Research"]},
+{id:"demo-3",date:"2026-01-09",hours:3,title:"Cloud budget review (fictional)",category:"Azure / Cloud",status:"Planned",what:"Compare an always-on test VM against planned shutdown.",soWhat:"Budget settings influence ongoing cost.",nowWhat:"Set a mock spending threshold.",skills:["Technical Impact"]}
+];
+var form=document.getElementById("taskForm"),editing=null;
+function text(v){return String(v==null?"":v)}
+function element(tag,className,content){var e=document.createElement(tag);if(className)e.className=className;if(content!==undefined)e.textContent=text(content);return e}
+function clone(v){return JSON.parse(JSON.stringify(v))}
+function read(){try{var s=localStorage.getItem(KEY);if(s===null)return clone(sample);var v=JSON.parse(s);return Array.isArray(v)?v:clone(sample)}catch(e){return clone(sample)}}
+function write(items){try{localStorage.setItem(KEY,JSON.stringify(items));return true}catch(e){document.getElementById("error").textContent="Browser storage is unavailable.";return false}}
+function field(name){return form.elements.namedItem(name)}
+function clear(){editing=null;form.reset();field("date").value=new Date().toISOString().slice(0,10);document.getElementById("formHeading").textContent="Add demo task";document.getElementById("save").textContent="Save task";document.getElementById("cancel").hidden=true;document.getElementById("error").textContent=""}
+function render(){
+var items=read().sort(function(a,b){return text(b.date).localeCompare(text(a.date))});
+var total=items.reduce(function(n,t){return n+(Number(t.hours)||0)},0);
+document.getElementById("hours").textContent=total.toFixed(1);
+document.getElementById("count").textContent=items.length;
+document.getElementById("completed").textContent=items.filter(function(t){return t.status==="Completed"}).length;
+document.getElementById("progress").textContent=Math.min(100,Math.round(total))+"%";
+var root=document.getElementById("entries");root.replaceChildren();
+if(!items.length){root.append(element("p","muted","No tasks yet. Add a fictional example."));return}
+items.forEach(function(t){
+var card=element("article","entry"),heading=element("h3","",t.title),meta=element("p","meta",text(t.date)+" · "+text(t.hours)+" hours · "+text(t.category));
+card.append(heading,meta,element("span","label",t.status));
+var reflections=element("div","reflections");
+[["WHAT",t.what],["SO WHAT",t.soWhat],["NOW WHAT",t.nowWhat]].forEach(function(part){var block=element("div");block.append(element("b","",part[0]),element("p","",part[1]));reflections.append(block)});
+card.append(reflections);
+var tags=element("div","tags");(Array.isArray(t.skills)?t.skills:[]).forEach(function(s){tags.append(element("span","",s))});card.append(tags);
+var actions=element("div","entry-actions");var edit=element("button","","Edit"),del=element("button","danger","Delete");edit.type="button";del.type="button";
+edit.addEventListener("click",function(){editing=t.id;["date","hours","title","category","status","what","soWhat","nowWhat"].forEach(function(k){field(k).value=t[k]||""});form.querySelectorAll('input[name="skill"]').forEach(function(c){c.checked=(t.skills||[]).includes(c.value)});document.getElementById("formHeading").textContent="Edit demo task";document.getElementById("save").textContent="Update task";document.getElementById("cancel").hidden=false;form.scrollIntoView({block:"start",behavior:"smooth"})});
+del.addEventListener("click",function(){if(confirm("Delete this fictional demo task?")){if(write(read().filter(function(x){return x.id!==t.id}))){if(editing===t.id)clear();render()}}});
+actions.append(edit,del);card.append(actions);root.append(card);
+});
+}
+var skillList=document.getElementById("skills");SKILLS.forEach(function(s){var label=element("label");var cb=document.createElement("input");cb.type="checkbox";cb.name="skill";cb.value=s;label.append(cb,document.createTextNode(" "+s));skillList.append(label)});
+form.addEventListener("submit",function(ev){ev.preventDefault();var data=new FormData(form);var hours=Number(data.get("hours"));if(!Number.isFinite(hours)||hours<.25||hours>24){document.getElementById("error").textContent="Hours must be from 0.25 to 24.";return}
+var task={date:text(data.get("date")),hours:hours,title:text(data.get("title")).trim(),category:text(data.get("category")),status:text(data.get("status")),what:text(data.get("what")),soWhat:text(data.get("soWhat")),nowWhat:text(data.get("nowWhat")),skills:data.getAll("skill")};if(!task.title||!task.what)return;
+var items=read();if(editing){items=items.map(function(item){return item.id===editing?Object.assign({},item,task):item})}else{task.id="demo-"+Date.now()+"-"+Math.random().toString(36).slice(2,6);items.push(task)}
+if(write(items)){clear();render()}
+});
+document.getElementById("cancel").onclick=clear;
+document.getElementById("reset").onclick=function(){if(confirm("Reset browser-only demonstration data?")){if(write(clone(sample))){clear();render()}}};
+clear();render();
+})();
+</script>
+</body></html>
