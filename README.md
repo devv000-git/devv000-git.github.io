@@ -12,7 +12,7 @@ The portfolio supports graduate and junior roles in security operations, cyberse
 | --- | --- | --- |
 | [Python ARP spoofing detector](https://devv000-git.github.io/#project/arp-detector) | Python, Scapy, Linux | Original monitoring and alert screenshots, reconstructed code and unit tests |
 | [Malware network traffic investigation](https://devv000-git.github.io/#project/malware-pcap) | Wireshark, PCAP, HTTP | Original endpoint, HTTP request and executable-header screenshot crops |
-| [Malware behaviour and ATT&CK mapping](https://devv000-git.github.io/#project/malware-analysis) | Ghidra, VirusTotal, MITRE ATT&CK | Source report references, further screenshots being prepared |
+| [Malware behaviour and ATT&CK mapping](https://devv000-git.github.io/#project/malware-analysis) | Ghidra, VirusTotal, MITRE ATT&CK | Original Ghidra and VirusTotal screenshot crops, documented ATT&CK mapping and confidence limits |
 | [Windows memory forensics](https://devv000-git.github.io/#project/memory-forensics) | Volatility, FTK Imager | Source report references, further screenshots being prepared |
 | [Web application security assessment](https://devv000-git.github.io/#project/web-security) | Burp Suite, DVWA | Source report references, further screenshots being prepared |
 | [Cybersecurity data analytics](https://devv000-git.github.io/#project/security-analytics) | Python, pandas, matplotlib | Source report references, further screenshots being prepared |
@@ -23,7 +23,7 @@ Seven additional supporting investigations are accessible through the [projects 
 
 - Each case study identifies its originating university unit and the relevant PDF page references.
 - Public images are selected excerpts, not complete assessment submissions.
-- Evidence galleries are available for [SIT379 ARP detector screenshots](docs/arp-evidence-register.md) and [SIT327 packet-capture analysis](docs/network-forensics-evidence-register.md).
+- Evidence galleries are available for [SIT379 ARP detector screenshots](docs/arp-evidence-register.md), [SIT327 packet-capture analysis](docs/network-forensics-evidence-register.md), and [SIT324 malware analysis](docs/malware-analysis-evidence-register.md).
 - Where code has been reconstructed from a report screenshot, it is labelled as reconstructed. It must not be mistaken for the exact original submitted source.
 - Observed alerts are not automatically proof of compromise. Case studies document limits and alternative explanations.
 - Original university reports, malicious samples, credentials and private data are not distributed here.
