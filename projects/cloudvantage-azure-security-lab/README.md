@@ -1,47 +1,42 @@
-# CloudVantage | Azure Security Monitoring Placement
+# CloudVantage | Azure Security and Cloud Application Placement
 
 **Role:** IT Support & Cloud Analyst, industry placement  
 **Organisation:** CloudVantage Australia  
-**Profile-documented dates:** July–November 2026  
-**Evidence status:** LinkedIn description verified. Original lab files and screenshots are **not** available in the public portfolio repository.
+**Source coverage:** Private placement logbook entries from **3 August to 24 September 2026**  
+**Related employment dates:** LinkedIn profile lists July–November 2026
 
-## What the supplied LinkedIn profile supports
+## Documented practical projects
 
-The profile states that the placement included:
+The owner supplied a dated placement logbook, giving stronger evidence than the previously available LinkedIn description. Two projects now have individual source-backed case studies.
 
-- Building and configuring Microsoft Azure environments.
-- Creating a cloud security monitoring lab using Microsoft Sentinel and Azure Monitor.
-- Working with Microsoft Entra ID, Azure networking and security monitoring.
-- Learning Log Analytics and KQL.
-- Reviewing Microsoft Defender security recommendations.
-- Practising cloud troubleshooting, security controls and IT support.
+### Azure Security Monitoring Lab
 
-These statements are based on the portfolio owner's direct LinkedIn profile and must not be extrapolated into a production customer deployment or confirmed live security incident response.
+From 7–11 September 2026, the logbook records creating a student Azure resource group and Log Analytics workspace, enabling Microsoft Sentinel, provisioning a Windows Server VM with RDP restricted to a source IP, configuring a Windows Event Log Data Collection Rule and creating a cost budget.
 
-## Evidence still needed for a technical case study
+It also records **beginning**, rather than completing, a custom auto-shutdown Azure Policy. Entra log ingestion was **limited by licensing** in the Azure for Students environment.
 
-| Artifact | What it could verify | Status |
-| --- | --- | --- |
-| Azure resource inventory and architecture screenshot | Actual lab components and resource relationships | Not uploaded |
-| Virtual network and NSG configuration | Networking and access restrictions | Not uploaded |
-| Log Analytics workspace configuration | Log collection and data location | Not uploaded |
-| Redacted KQL queries and outputs | Actual queries and investigation technique | Not uploaded |
-| Sentinel configuration / alert views | Which features were activated successfully | Not uploaded |
-| Microsoft Defender recommendations | Observed findings and decisions | Not uploaded |
-| Budget / auto-shutdown screenshots | Cost governance within the lab | Not uploaded |
+[Read the detailed lab study](../azure-security-monitoring-lab/README.md)
 
-The next iteration should only display diagrams and investigation results that can be traced to one of these original artifacts. It should also distinguish **attempted configuration** from a feature that was actually working.
+### Azure Placement Task Dashboard
 
-## Proposed case-study format
+On 3–4 September 2026, the logbook records using Terraform to provision Azure hosting and storage components, deploying a React frontend to Azure Static Web Apps, linking a Python Azure Functions API to Azure Table Storage, and testing create, view, edit and delete operations.
 
-1. **Situation:** An Azure security monitoring practice environment was needed during the placement.
-2. **Task:** Configure cloud resources and learn how to review security telemetry.
-3. **Action:** Describe the exact Azure resources, configurations, queries and monitoring outputs, once evidence is available.
-4. **Result:** State only confirmed changes and screenshots. Do not claim Microsoft Sentinel alert detection or cloud security incidents without source evidence.
-5. **Safety:** Remove subscription IDs, tenant IDs, IP addresses if sensitive, keys, access tokens, emails and client data.
+The MVP was demonstrated to the placement supervisor. A later logbook entry describes a Python import script that used API requests and duplicate checks.
 
-## Where this appears
+[Read the detailed dashboard study](../azure-placement-dashboard/README.md)
 
-[Industry case studies and placement overview](../../industry-projects.html#cloudvantage)
+## Supporting activities
 
-The portfolio owner retains the original placement material. This README is a **source and evidence checklist**, not a new lab implementation.
+- **31 August and 1 September:** researched Microsoft Defender recommendations, including attack surface reduction, antivirus, endpoint monitoring, device compliance and identity-related settings. Supervisor discussed technical risks and impact. No implemented production remediation outcome is recorded.
+- **24–25 August:** initial VM practice and review of VNet, subnet, IP addressing, network interface and NSG rules.
+- **14–24 September:** networking, Windows/Linux server management, patching and recovery, ITIL processes, PowerShell/Python and Azure versus AWS service comparisons were studied or practised as described in the source.
+
+## Evidence standard
+
+The original private logbook is **not posted** publicly. The public website uses source-derived descriptions and reconstructed architecture diagrams, not fake screenshots.
+
+**Not yet provided:** Azure Portal evidence, original React/Python code, Terraform source, KQL queries and query outputs, relevant GitHub repository access, cost-policy results and any real Sentinel alerts.
+
+Original Azure resource names, tenant identifiers and IP addresses have been omitted from public documentation. Production deployment, successful SOC incident detection and enforced auto-shutdown are not claimed.
+
+See the [logbook evidence register](../../docs/cloudvantage-logbook-evidence-register.md) and the [portfolio cases](../../industry-projects.html#cloudvantage).
