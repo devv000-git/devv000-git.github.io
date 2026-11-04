@@ -13,7 +13,7 @@ The portfolio supports graduate and junior roles in security operations, cyberse
 | [Python ARP spoofing detector](https://devv000-git.github.io/#project/arp-detector) | Python, Scapy, Linux | Original monitoring and alert screenshots, reconstructed code and unit tests |
 | [Malware network traffic investigation](https://devv000-git.github.io/#project/malware-pcap) | Wireshark, PCAP, HTTP | Original endpoint, HTTP request and executable-header screenshot crops |
 | [Malware behaviour and ATT&CK mapping](https://devv000-git.github.io/#project/malware-analysis) | Ghidra, VirusTotal, MITRE ATT&CK | Original Ghidra and VirusTotal screenshot crops, documented ATT&CK mapping and confidence limits |
-| [Windows memory forensics](https://devv000-git.github.io/#project/memory-forensics) | Volatility, FTK Imager | Two separately sourced investigations, PID correlation, memory-region findings and page-referenced evidence register |
+| [Windows memory forensics](https://devv000-git.github.io/#project/memory-forensics) | Volatility, FTK Imager | Two original Volatility screenshot crops, separate investigation timelines and evidence register |
 | [Web application security assessment](https://devv000-git.github.io/#project/web-security) | Burp Suite, BodgeIt Store, DVWA | Four original screenshot crops, nine documented vulnerabilities and behaviours, remediation recommendations |
 | [Cybersecurity data analytics](https://devv000-git.github.io/#project/security-analytics) | Python, pandas, matplotlib | Three transparently recreated figures, source-derived tables, reproducible Python code and seven unit tests |
 
@@ -24,7 +24,7 @@ Seven additional supporting investigations are accessible through the [projects 
 - Each case study identifies its originating university unit and the relevant PDF page references.
 - Public images are selected excerpts, not complete assessment submissions.
 - Evidence galleries are available for [SIT379 ARP detector screenshots](docs/arp-evidence-register.md), [SIT327 packet-capture analysis](docs/network-forensics-evidence-register.md), and [SIT324 malware analysis](docs/malware-analysis-evidence-register.md).
-- The [SIT324 Windows memory forensics project](docs/memory-forensics-evidence-register.md) now has a detailed, page-referenced evidence register and two clearly separated investigations. Original memory screenshots are not yet published in that case study.
+- The [SIT324 Windows memory forensics project](docs/memory-forensics-evidence-register.md) now has a detailed, page-referenced evidence register and two clearly separated investigations. Two original Volatility output crops are now published and carefully attributed to separate captures.
 - The [SIT379 web application security project](docs/web-security-evidence-register.md) includes original XSS, negative-basket and file-upload evidence, with private request credentials excluded.
 - The [SIT384 analytics case study](docs/sit384-analytics-evidence-register.md) provides three **figure reconstructions**, not original screenshots. Its original dataset files are unavailable, and the publicly tested code is labelled as reconstructed.
 - Where code has been reconstructed from a report screenshot, it is labelled as reconstructed. It must not be mistaken for the exact original submitted source.
