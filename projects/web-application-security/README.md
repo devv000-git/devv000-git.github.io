@@ -37,6 +37,17 @@ The browser alert confirms script execution within the intentionally vulnerable 
 
 The captured request shows the submitted metadata. The **successful upload** is separately documented in the source report on page 253. A request modification alone does not establish success.
 
+
+### Business logic: negative basket total, page 249
+
+![BodgeIt basket with quantity -15 and an overall negative total](../../assets/evidence/web-security/basket-result.png)
+
+### File upload success, page 253
+
+![DVWA response confirming the HTML file upload](../../assets/evidence/web-security/upload-confirmation.png)
+
+The upload request and upload success screenshots are separate pieces of evidence. The first demonstrates a client-supplied MIME mismatch. The second shows the application accepted the file.
+
 ## Technical reasoning and recommended fixes
 
 ### XSS
