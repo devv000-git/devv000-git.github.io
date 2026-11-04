@@ -122,23 +122,28 @@ footer{border-top:1px solid var(--line);padding:28px 0;font-size:13px;color:var(
 <div class="section-heading"><span class="label">PLACEMENT CASE STUDY 05 / CLOUD APPLICATION</span><span class="section-num">3–4 SEP 2026</span></div>
 <h2>Azure Placement Task Dashboard<span class="accent">.</span></h2>
 <p class="lead">I deployed and demonstrated a cloud-hosted dashboard using React, Python Azure Functions and Azure Table Storage, with Terraform infrastructure configuration and tested task record operations.</p>
+<div class="actions"><a class="btn primary" href="demos/placement-dashboard/">Try the privacy-safe interactive demo ↗</a><a class="btn" href="https://github.com/devv000-git/devv000-git.github.io/blob/main/docs/placement-dashboard-source-review.md" target="_blank" rel="noopener noreferrer">Read original source review ↗</a></div>
+<p style="color:#b5cbd1;font-size:13px">Demo tasks are fictional and stay in your browser. The original React and Azure backend source was inspected separately.</p>
 <div class="overview"><div class="stat"><b>React</b><span>Frontend hosted on Azure Static Web Apps</span></div><div class="stat"><b>Python</b><span>Azure Functions backend</span></div><div class="stat"><b>CRUD</b><span>Create, view, edit and delete tested in the deployed MVP</span></div></div>
 <div class="case-grid">
-<div class="panel"><h3>Architecture described in the logbook</h3><div class="flow">
+<div class="panel"><h3>Architecture verified from code and logbook</h3><div class="flow">
 <div class="step">Browser / React frontend<small>Azure Static Web Apps</small></div><div class="arrow">↓</div>
 <div class="step">Python backend API<small>Azure Functions</small></div><div class="arrow">↓</div>
 <div class="step">Placement task data<small>Azure Table Storage</small></div>
-</div><p>Terraform was used for cloud resource provisioning. The logbook also describes an API-based Python import script with duplicate checks. The diagram is reconstructed from the source text.</p></div>
+</div><p>The uploaded Terraform files confirm the Azure resource group, storage account, private evidence container, task table, Linux Function App and Static Web App. The Python source shows a TableServiceClient-backed CRUD API.</p></div>
 <div class="panel"><h3>What I documented</h3><ul>
 <li><strong>3 Sep:</strong> Provisioned the resource group, storage resources, hosting plan, Function App and Static Web App configuration using Terraform.</li>
 <li><strong>4 Sep:</strong> Deployed React frontend and Python Functions backend, connected Azure Table Storage and tested create, read, update and delete interactions.</li>
 <li><strong>4 Sep:</strong> Demonstrated the MVP to the placement supervisor and updated source documentation.</li>
 <li><strong>22 Sep:</strong> Reflected on an import script using API requests and duplicate checks for placement records.</li>
 </ul></div></div>
-<div class="proof"><strong>Result documented in the placement logbook: a deployed and demonstrated working MVP.</strong><p>The source explicitly records testing all four task-management operations. It does not provide the original application's source files in this connected GitHub account, nor any user-adoption, performance or production-hardening measurements.</p></div>
+<div class="proof"><strong>Result documented in the placement logbook: a deployed and demonstrated working MVP.</strong><p>The uploaded VS Code files independently support the application structure: React state and forms, HTTP CRUD client, Python Azure Functions endpoints, and Terraform resources. The dated logbook records CRUD testing and a supervisor demonstration. No production-hardening, adoption or uptime metrics are claimed.</p></div>
 <div class="star"><div><b>S / SITUATION</b><p>Placement activities needed an organised task record system.</p></div><div><b>T / TASK</b><p>Build and host an application that persists task entries in Azure.</p></div><div><b>A / ACTION</b><p>Used Terraform, deployed React and Python services, connected Table Storage, and tested CRUD operations.</p></div><div><b>R / RESULT</b><p>Demonstrated the deployed MVP to the supervisor and recorded successful functional checks.</p></div></div>
-<div class="notice"><strong>Source code and screenshots still needed</strong><p>The logbook reports that code was pushed to GitHub, but that repository was not accessible through the currently connected account. This page does not claim independent review of the Terraform files, backend code or authentication controls.</p></div>
+<div class="notice"><strong>Security and privacy note</strong><p>The original Functions app allowed anonymous task operations because Microsoft Entra authentication was not completed. The uploaded project also contained credential-bearing local settings and Terraform state. These files and all private placement records are excluded from publication. The public demo has no Azure connection. Any future live backend would need authentication, authorisation and secret rotation.</p></div>
 <div class="evidence-links">
+<a href="demos/placement-dashboard/">Try browser-only CRUD demo ↗<small>Fictional entries and local storage, no backend</small></a>
+<a href="https://github.com/devv000-git/devv000-git.github.io/blob/main/projects/azure-placement-dashboard/code-examples/backend/function_app_reference.py" target="_blank" rel="noopener noreferrer">Review Python Azure Functions example ↗<small>Security-adjusted and without credentials</small></a>
+<a href="https://github.com/devv000-git/devv000-git.github.io/blob/main/projects/azure-placement-dashboard/code-examples/terraform/azure-resources.tf" target="_blank" rel="noopener noreferrer">Review sanitised Terraform ↗<small>Azure resource map without account identifiers</small></a>
 <a href="https://github.com/devv000-git/devv000-git.github.io/blob/main/projects/azure-placement-dashboard/README.md" target="_blank" rel="noopener noreferrer">Dashboard technical report ↗<small>Architecture and source-backed functional result</small></a>
 <a href="https://github.com/devv000-git/devv000-git.github.io/blob/main/docs/cloudvantage-logbook-evidence-register.md" target="_blank" rel="noopener noreferrer">Placement source register ↗<small>Logbook rows and evidence strength</small></a>
 </div></section>
