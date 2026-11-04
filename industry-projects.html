@@ -2,7 +2,7 @@
 <html lang="en-AU"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#07121c">
-<meta name="description" content="Devin Kalansuriya's verified cloud security capstone work. Terraform, OPA/Rego, GCP IAM controls, Python automation and industry placement.">
+<meta name="description" content="Devin Kalansuriya's cloud security work: Terraform, OPA/Rego, Azure monitoring, Python automation and cloud application deployment.">
 <title>Cloud Security & Industry Work | Devin Kalansuriya</title>
 <style>
 :root{color-scheme:dark;--bg:#07121c;--panel:#0e1c28;--line:#284553;--ink:#eef6f5;--muted:#aec1c9;--accent:#7ce2c4;--amber:#f4d19a}
@@ -34,11 +34,11 @@ footer{border-top:1px solid var(--line);padding:28px 0;font-size:13px;color:var(
 <header><nav class="wrap" aria-label="Site navigation"><a class="brand" href="index.html#home">DK<span class="accent">.</span> / DEVIN KALANSURIYA</a><div class="links"><a href="index.html#experience">Experience</a><a href="index.html#projects">Lab projects</a><a href="index.html#contact">Contact</a></div></nav></header>
 <main id="main">
 <section class="hero wrap"><span class="label">INDUSTRY CAPSTONE / SOURCE-VERIFIED WORK</span><h1>Cloud security,<br><span class="accent">backed by code.</span></h1>
-<p class="intro">My contributions to Hardhat Enterprises' Policy Deployment Engine span Terraform security assessment, OPA/Rego guardrails and Python tooling. The three case studies below link directly to <strong>merged GitHub pull requests authored by my account</strong>, so reviewers can inspect the work.</p>
+<p class="intro">My contributions to Hardhat Enterprises' Policy Deployment Engine span Terraform security assessment, OPA/Rego guardrails and Python tooling. The three Hardhat cases link directly to <strong>merged GitHub pull requests authored by my account</strong>. Two placement cases draw on a dated private logbook, with technical artifacts still to be added.</p>
 <div class="pills"><span class="pill">Terraform / GCP</span><span class="pill">OPA / Rego</span><span class="pill">Python / pytest</span><span class="pill">Collaborative GitHub PRs</span></div>
 <div class="actions"><a class="btn primary" href="#iam">Explore the cases ↗</a><a class="btn" href="https://github.com/Hardhat-Enterprises/Policy-Deployment-Engine" target="_blank" rel="noopener noreferrer">Upstream team repository ↗</a></div>
 </section>
-<nav class="quick-links" aria-label="Industry case studies"><div class="wrap"><a href="#iam">01 / GCP IAM controls</a><a href="#generator">02 / Python skeleton generator</a><a href="#quotas">03 / Cloud Quotas</a><a href="#cloudvantage">04 / Azure placement</a></div></nav>
+<nav class="quick-links" aria-label="Industry case studies"><div class="wrap"><a href="#iam">01 / GCP IAM controls</a><a href="#generator">02 / Python skeleton generator</a><a href="#quotas">03 / Cloud Quotas</a><a href="#cloudvantage">04 / Azure lab</a><a href="#dashboard">05 / Azure dashboard</a></div></nav>
 
 <section class="content-section wrap" id="iam"><div class="section-heading"><span class="label">CASE STUDY 01 / CLOUD GOVERNANCE</span><span class="section-num">MAR – SEP 2026</span></div>
 <h2>GCP IAM Policy Controls<span class="accent">.</span></h2>
@@ -91,15 +91,57 @@ footer{border-top:1px solid var(--line);padding:28px 0;font-size:13px;color:var(
 <a href="https://github.com/devv000-git/devv000-git.github.io/blob/main/projects/gcp-cloud-quotas-policy/README.md" target="_blank" rel="noopener noreferrer">Read the Quotas case study ↗<small>Limitations and technical interpretation</small></a>
 </div></section>
 
-<section class="content-section wrap" id="cloudvantage"><div class="section-heading"><span class="label">PLACEMENT / AZURE SECURITY</span><span class="section-num">JUL – NOV 2026</span></div>
-<h2>CloudVantage Azure Security Lab<span class="accent">.</span></h2>
-<p class="lead">During my IT Support &amp; Cloud Analyst industry placement, I built Azure environments and worked with cloud security monitoring, identity, networking and Defender recommendations.</p>
-<div class="case-grid"><div class="panel"><h3>Documented work</h3><ul>
-<li>Azure resources and network configuration, including identity and infrastructure basics.</li><li>Security monitoring lab using Microsoft Sentinel and Azure Monitor.</li><li>Microsoft Entra ID, Log Analytics and KQL experience.</li><li>Review of Microsoft Defender security recommendations and troubleshooting.</li></ul><p>This description follows my uploaded LinkedIn PDF. It does not describe a production customer deployment.</p></div>
-<div class="panel"><h3>Next technical evidence to add</h3><ul>
-<li>Sanitised resource group, VNet, VM and Log Analytics screenshots.</li><li>Redacted KQL queries with outputs and explanation.</li><li>Architecture diagram showing the real lab configuration.</li><li>Defender recommendation screenshots and a remediation summary.</li></ul></div></div>
-<div class="notice"><strong>Evidence status</strong><p>A technical summary exists in the supplied LinkedIn profile. Original Azure lab screenshots, KQL scripts and configuration files are not in the currently accessible project sources. I have not invented those records or marked this as a fully verified cloud case study.</p></div>
-<a class="btn" href="index.html#experience">View placement overview ↗</a></section>
+<section class="content-section wrap" id="cloudvantage">
+<div class="section-heading"><span class="label">PLACEMENT CASE STUDY 04 / AZURE SECURITY</span><span class="section-num">SEP 2026</span></div>
+<h2>Azure Security Monitoring Lab<span class="accent">.</span></h2>
+<p class="lead">I built a personal Azure security learning lab during my CloudVantage placement, using a Windows Server VM, restricted RDP access, Azure Monitor, Log Analytics, Microsoft Sentinel and Entra diagnostic settings.</p>
+<div class="overview"><div class="stat"><b>5</b><span>Dated lab entries from 7–11 September 2026</span></div><div class="stat"><b>1</b><span>Windows Server VM described in the logbook</span></div><div class="stat"><b>IP</b><span>RDP inbound restricted to one source address</span></div></div>
+<div class="case-grid">
+<div class="panel"><h3>Reconstructed monitoring architecture</h3><div class="flow">
+<div class="step">Windows Server VM <small>VNet, subnet, NIC and NSG</small></div><div class="arrow">↓</div>
+<div class="step">Azure Monitor Data Collection Rule <small>Configured Windows Event Log collection</small></div><div class="arrow">↓</div>
+<div class="step">Log Analytics Workspace <small>Central log destination</small></div><div class="arrow">↓</div>
+<div class="step">Microsoft Sentinel <small>Enabled on the workspace</small></div>
+</div><p>Architecture reconstructed from the placement logbook, not exported from a live Azure configuration.</p></div>
+<div class="panel"><h3>Dated technical work</h3><ul>
+<li><strong>7 Sep:</strong> Created resource group and Log Analytics workspace in Australia East, enabled Sentinel.</li>
+<li><strong>8 Sep:</strong> Deployed a Windows Server VM, network resources and source-IP-limited RDP NSG rule.</li>
+<li><strong>9 Sep:</strong> Configured and associated a Data Collection Rule for Windows Event Logs.</li>
+<li><strong>10 Sep:</strong> Created an Azure budget and began a custom auto-shutdown policy.</li>
+<li><strong>11 Sep:</strong> Configured Entra audit diagnostics but encountered a licensing restriction on full ingestion.</li>
+</ul></div></div>
+<div class="proof"><strong>Confirmed from the dated logbook: a configured student monitoring lab and restricted VM access.</strong><p>The source supports provisioning and monitoring setup. It does not include original event counts, KQL query output, detected alerts or proof that the auto-shutdown policy was successfully enforced.</p></div>
+<div class="star"><div><b>S / SITUATION</b><p>Needed practical exposure to cloud logging and security monitoring.</p></div><div><b>T / TASK</b><p>Build a student Azure environment with bounded remote access and a central event-log collection path.</p></div><div><b>A / ACTION</b><p>Configured Azure VM networking, a restricted NSG, Data Collection Rule, Log Analytics, Sentinel and cost monitoring.</p></div><div><b>R / RESULT</b><p>Documented the configured environment, including the explicit Entra licensing constraint and unfinished policy enforcement.</p></div></div>
+<div class="notice"><strong>Evidence status</strong><p>These findings come from a private placement logbook, not from newly inspected Azure screenshots or raw telemetry. The workbook has not been published. Exact resource identifiers and source IPs are intentionally omitted.</p></div>
+<div class="evidence-links">
+<a href="https://github.com/devv000-git/devv000-git.github.io/blob/main/projects/azure-security-monitoring-lab/README.md" target="_blank" rel="noopener noreferrer">Technical lab case study ↗<small>Source-mapped configuration and implementation limits</small></a>
+<a href="https://github.com/devv000-git/devv000-git.github.io/blob/main/docs/cloudvantage-logbook-evidence-register.md" target="_blank" rel="noopener noreferrer">Logbook evidence register ↗<small>Dated evidence, specific rows and verification status</small></a>
+</div></section>
+
+<section class="content-section wrap" id="dashboard">
+<div class="section-heading"><span class="label">PLACEMENT CASE STUDY 05 / CLOUD APPLICATION</span><span class="section-num">3–4 SEP 2026</span></div>
+<h2>Azure Placement Task Dashboard<span class="accent">.</span></h2>
+<p class="lead">I deployed and demonstrated a cloud-hosted dashboard using React, Python Azure Functions and Azure Table Storage, with Terraform infrastructure configuration and tested task record operations.</p>
+<div class="overview"><div class="stat"><b>React</b><span>Frontend hosted on Azure Static Web Apps</span></div><div class="stat"><b>Python</b><span>Azure Functions backend</span></div><div class="stat"><b>CRUD</b><span>Create, view, edit and delete tested in the deployed MVP</span></div></div>
+<div class="case-grid">
+<div class="panel"><h3>Architecture described in the logbook</h3><div class="flow">
+<div class="step">Browser / React frontend<small>Azure Static Web Apps</small></div><div class="arrow">↓</div>
+<div class="step">Python backend API<small>Azure Functions</small></div><div class="arrow">↓</div>
+<div class="step">Placement task data<small>Azure Table Storage</small></div>
+</div><p>Terraform was used for cloud resource provisioning. The logbook also describes an API-based Python import script with duplicate checks. The diagram is reconstructed from the source text.</p></div>
+<div class="panel"><h3>What I documented</h3><ul>
+<li><strong>3 Sep:</strong> Provisioned the resource group, storage resources, hosting plan, Function App and Static Web App configuration using Terraform.</li>
+<li><strong>4 Sep:</strong> Deployed React frontend and Python Functions backend, connected Azure Table Storage and tested create, read, update and delete interactions.</li>
+<li><strong>4 Sep:</strong> Demonstrated the MVP to the placement supervisor and updated source documentation.</li>
+<li><strong>22 Sep:</strong> Reflected on an import script using API requests and duplicate checks for placement records.</li>
+</ul></div></div>
+<div class="proof"><strong>Result documented in the placement logbook: a deployed and demonstrated working MVP.</strong><p>The source explicitly records testing all four task-management operations. It does not provide the original application's source files in this connected GitHub account, nor any user-adoption, performance or production-hardening measurements.</p></div>
+<div class="star"><div><b>S / SITUATION</b><p>Placement activities needed an organised task record system.</p></div><div><b>T / TASK</b><p>Build and host an application that persists task entries in Azure.</p></div><div><b>A / ACTION</b><p>Used Terraform, deployed React and Python services, connected Table Storage, and tested CRUD operations.</p></div><div><b>R / RESULT</b><p>Demonstrated the deployed MVP to the supervisor and recorded successful functional checks.</p></div></div>
+<div class="notice"><strong>Source code and screenshots still needed</strong><p>The logbook reports that code was pushed to GitHub, but that repository was not accessible through the currently connected account. This page does not claim independent review of the Terraform files, backend code or authentication controls.</p></div>
+<div class="evidence-links">
+<a href="https://github.com/devv000-git/devv000-git.github.io/blob/main/projects/azure-placement-dashboard/README.md" target="_blank" rel="noopener noreferrer">Dashboard technical report ↗<small>Architecture and source-backed functional result</small></a>
+<a href="https://github.com/devv000-git/devv000-git.github.io/blob/main/docs/cloudvantage-logbook-evidence-register.md" target="_blank" rel="noopener noreferrer">Placement source register ↗<small>Logbook rows and evidence strength</small></a>
+</div></section>
 </main>
 <footer><div class="wrap"><span>© 2026 Devin Kalansuriya · Academic capstone and industry placement portfolio</span><a href="index.html">← Return to main portfolio</a></div></footer>
 </body></html>
