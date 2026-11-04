@@ -17,13 +17,13 @@ All activities were restricted to deliberately vulnerable lab applications. Thes
 | Reflected cross-site scripting | BodgeIt Store | A search-field payload produced a browser alert in the immediate response | **228**, Figure 3 |
 | Stored cross-site scripting | BodgeIt Store | A registration payload produced an alert in the registration workflow | **229**, Figures 4–5 |
 | SQL injection / authentication bypass | BodgeIt Store | A manipulated username was accepted and the application indicated login success | **230**, Figure 6 |
-| Sensitive action accepted over GET | DVWA lab | A password-change operation returned HTTP 200 and confirmation when sent as GET | **244–246**, Figure 5 on p. 246 |
+| Sensitive action accepted over GET | BodgeIt Store | A password-change operation returned HTTP 200 and confirmation when sent as GET | **244–246**, Figure 5 on p. 246 |
 | Negative quantity accepted | BodgeIt Store | A manipulated basket quantity of **-15** produced a **($4.00)** basket total | **248–250**, Figure 8 on p. 249 |
 | Inadequate upload MIME validation | DVWA Medium | An HTML file blocked initially was accepted after the submitted MIME type was changed to an image type | **251–254**, Figures 10–13 |
 
 ## Representative original screenshot evidence
 
-The following screenshots are cropped from the **original university assessment**, converted to high-contrast monochrome. They are not demonstrations performed against a live public service.
+The following four screenshots are cropped from the **original university assessment**, converted to high-contrast monochrome. They are not demonstrations performed against a live public service.
 
 ### Reflected XSS, page 228
 
@@ -47,6 +47,18 @@ The captured request shows the submitted metadata. The **successful upload** is 
 ![DVWA response confirming the HTML file upload](../../assets/evidence/web-security/upload-confirmation.png)
 
 The upload request and upload success screenshots are separate pieces of evidence. The first demonstrates a client-supplied MIME mismatch. The second shows the application accepted the file.
+
+### Negative-quantity shopping basket, page 249
+
+![Original lab basket screenshot showing a quantity of minus 15 and overall total of minus four dollars](../../assets/evidence/web-security/basket-result.png)
+
+The screenshot directly shows the negative quantity and calculated negative total. This demonstrates the server accepted a value that should have been rejected under normal basket rules.
+
+### DVWA upload acceptance, page 253
+
+![DVWA screenshot confirming hacked.html was successfully uploaded](../../assets/evidence/web-security/upload-confirmation.png)
+
+This is the **separate confirmation** following the intercepted multipart request shown above. The source report also displays the uploaded HTML content rendered in the browser on page 254. Rendering HTML does not establish server-side code execution.
 
 ## Technical reasoning and recommended fixes
 
@@ -83,6 +95,18 @@ The upload request and upload success screenshots are separate pieces of evidenc
 **Mitigation:** Validate allowed types using server-side checks, independently inspect content, randomise safe filenames, isolate storage and prevent uploaded content from executing as active material.
 
 **Precision:** The lab uploaded and displayed an HTML document containing a message. Although the report uses the term “script executed,” the demonstrated evidence does **not** prove arbitrary operating-system command execution or remote code execution.
+
+## Additional evidence from Task 8.1P
+
+The source PDF also documents several findings that are relevant to secure design but are not represented in the currently published screenshot gallery:
+
+- **Debug information disclosure:** BodgeIt Store exposed a basket identifier when a diagnostic request parameter was supplied (p. 226).
+- **Command execution:** DVWA's intentionally vulnerable command execution exercise produced a shell running as the restricted `www-data` web-server account in the lab (pp. 232–233).
+- **Vulnerability chaining:** A separate DVWA exercise combined a PHP file upload with file inclusion to demonstrate remote server-side shell access as `www-data` (pp. 234–235).
+
+The PHP-based command execution exercise must be distinguished from the later **HTML upload** exercise. The HTML page in Task 8.2C was served to a browser and does not itself demonstrate a server-side shell.
+
+No original PHP payload, listener script, session credentials, or executable is published here.
 
 ## STAR summary
 
