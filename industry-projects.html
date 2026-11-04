@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en-AU"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#07121c">
+<meta name="description" content="Devin Kalansuriya's verified cloud security capstone work. Terraform, OPA/Rego, GCP IAM controls, Python automation and industry placement.">
+<title>Cloud Security & Industry Work | Devin Kalansuriya</title>
+<style>
+:root{color-scheme:dark;--bg:#07121c;--panel:#0e1c28;--line:#284553;--ink:#eef6f5;--muted:#aec1c9;--accent:#7ce2c4;--amber:#f4d19a}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 system-ui,-apple-system,Segoe UI,sans-serif}a{color:inherit}a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}h1,h2,h3,p{margin-top:0}p{max-width:78ch}h1,h2,h3{line-height:1.2;letter-spacing:-.035em}h1{font-size:clamp(40px,6vw,74px);letter-spacing:-.055em;margin:14px 0 22px}h2{font-size:clamp(30px,4vw,44px);margin:14px 0 28px}h3{font-size:21px}strong{color:var(--ink)}code{font:13px/1.5 ui-monospace,Consolas,monospace;color:#cce9df;overflow-wrap:anywhere}section[id]{scroll-margin-top:88px}
+.wrap{max-width:1130px;margin:auto;padding:0 26px}
+.skip{position:absolute;left:-999px}.skip:focus{left:12px;top:12px;background:var(--accent);color:#061c18;padding:10px;z-index:9}
+header{background:#081721f2;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5;backdrop-filter:blur(9px)}
+nav{display:flex;align-items:center;justify-content:space-between;gap:15px;min-height:72px}
+nav a{text-decoration:none;font-size:13px;font-weight:650}nav .brand{letter-spacing:.04em}.accent{color:var(--accent)}nav .links{display:flex;gap:22px;flex-wrap:wrap}nav .links a{color:#c2d1d8}nav a:hover{color:var(--accent)}
+.hero{padding:90px 0 70px}.label{font:700 12px/1.65 ui-monospace,Consolas,monospace;letter-spacing:.12em;color:var(--accent);text-transform:uppercase}.hero .intro{max-width:780px;color:var(--muted);font-size:20px;line-height:1.75}
+.pills{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0}.pill{border:1px solid #3a7167;border-radius:30px;background:#10302e;padding:6px 13px;color:#b9e8d8;font:12px/1.6 ui-monospace,monospace}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}.btn{padding:12px 18px;border:1px solid #446677;border-radius:5px;text-decoration:none;display:inline-block;font-weight:650;font-size:14px}.btn.primary{background:var(--accent);color:#06251e;border-color:var(--accent)}.btn:hover{border-color:var(--accent)}
+.content-section{padding:77px 0;border-top:1px solid var(--line)}.section-heading{display:flex;align-items:center;justify-content:space-between;gap:20px}.section-num{font:13px ui-monospace,Consolas,monospace;color:#90b4b6}.lead{font-size:19px;color:var(--muted)}
+.overview{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin:28px 0}.stat{background:#102a34;border:1px solid var(--line);border-radius:7px;padding:20px}.stat b{display:block;font-size:30px;color:var(--accent)}.stat span{font-size:13px;color:var(--muted)}
+.case-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:23px;margin:28px 0}.panel{background:var(--panel);border:1px solid var(--line);border-radius:7px;padding:26px}.panel p,.panel li{color:var(--muted);font-size:15px}.panel ul{padding-left:22px}.panel li{margin:9px 0}.panel h3{color:var(--accent);font-size:18px}
+.flow{display:grid;gap:10px;max-width:560px;margin:25px auto}.step{text-align:center;padding:14px;background:#15343b;border:1px solid #437d73;border-radius:6px;font-size:15px}.step small{display:block;color:#a5c8c6}.arrow{text-align:center;color:var(--accent);line-height:1}
+.proof{background:#12322e;border:1px solid #3c7569;border-radius:7px;margin:27px 0;padding:23px}.proof strong{color:#b0f0d7}.proof p{color:#bbd4cd;margin:9px 0 0}
+.evidence-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:22px 0}.evidence-links a{display:block;border:1px solid #355562;background:#102634;padding:17px;text-decoration:none;border-radius:5px;font-weight:650;font-size:14px}.evidence-links a:hover{border-color:var(--accent)}.evidence-links small{display:block;margin-top:5px;color:var(--muted);font-weight:400}
+.star{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:20px 0}.star div{background:#0e2530;border:1px solid #27444f;border-radius:6px;padding:16px}.star b{color:var(--accent);font-size:12px;letter-spacing:.05em}.star p{font-size:14px;margin:9px 0 0;color:var(--muted)}
+.notice{border-left:3px solid var(--amber);background:#1c2b30;padding:19px;margin:25px 0;color:#d6ddd9}.notice strong{color:var(--amber)}
+.quick-links{background:#0b1c26;padding:24px 0;border-top:1px solid var(--line)}.quick-links .wrap{display:flex;flex-wrap:wrap;gap:12px}.quick-links a{border:1px solid var(--line);padding:8px 12px;border-radius:4px;text-decoration:none;font-size:14px;color:#cce6e2}.quick-links a:hover{border-color:var(--accent)}
+footer{border-top:1px solid var(--line);padding:28px 0;font-size:13px;color:var(--muted)}footer .wrap{display:flex;justify-content:space-between;gap:20px}
+@media(max-width:800px){.overview,.case-grid{grid-template-columns:1fr}.hero{padding:60px 0 50px}.content-section{padding:55px 0}.evidence-links{grid-template-columns:1fr}}
+@media(max-width:560px){.wrap{padding:0 18px}nav .links{gap:13px}nav .links a{font-size:12px}.hero .intro{font-size:17px}.star{grid-template-columns:1fr}.panel{padding:20px}footer .wrap{flex-direction:column}.evidence-links{gap:10px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style></head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header><nav class="wrap" aria-label="Site navigation"><a class="brand" href="index.html#home">DK<span class="accent">.</span> / DEVIN KALANSURIYA</a><div class="links"><a href="index.html#experience">Experience</a><a href="index.html#projects">Lab projects</a><a href="index.html#contact">Contact</a></div></nav></header>
+<main id="main">
+<section class="hero wrap"><span class="label">INDUSTRY CAPSTONE / SOURCE-VERIFIED WORK</span><h1>Cloud security,<br><span class="accent">backed by code.</span></h1>
+<p class="intro">My contributions to Hardhat Enterprises' Policy Deployment Engine span Terraform security assessment, OPA/Rego guardrails and Python tooling. The three case studies below link directly to <strong>merged GitHub pull requests authored by my account</strong>, so reviewers can inspect the work.</p>
+<div class="pills"><span class="pill">Terraform / GCP</span><span class="pill">OPA / Rego</span><span class="pill">Python / pytest</span><span class="pill">Collaborative GitHub PRs</span></div>
+<div class="actions"><a class="btn primary" href="#iam">Explore the cases ↗</a><a class="btn" href="https://github.com/Hardhat-Enterprises/Policy-Deployment-Engine" target="_blank" rel="noopener noreferrer">Upstream team repository ↗</a></div>
+</section>
+<nav class="quick-links" aria-label="Industry case studies"><div class="wrap"><a href="#iam">01 / GCP IAM controls</a><a href="#generator">02 / Python skeleton generator</a><a href="#quotas">03 / Cloud Quotas</a><a href="#cloudvantage">04 / Azure placement</a></div></nav>
+
+<section class="content-section wrap" id="iam"><div class="section-heading"><span class="label">CASE STUDY 01 / CLOUD GOVERNANCE</span><span class="section-num">MAR – SEP 2026</span></div>
+<h2>GCP IAM Policy Controls<span class="accent">.</span></h2>
+<p class="lead">I contributed cloud identity security checks for Terraform configurations using OPA/Rego, supported by resource assessments and compliant versus non-compliant test examples.</p>
+<div class="overview"><div class="stat"><b>5</b><span>Security-related argument controls in merged PR</span></div><div class="stat"><b>37</b><span>Files changed in the merged PR</span></div><div class="stat"><b>#636</b><span>Accepted GitHub contribution</span></div></div>
+<div class="case-grid"><div class="panel"><h3>Verified implementation scope</h3><ul>
+<li><code>attribute_condition</code>, to consider restrictive identity-provider claims.</li><li><code>deletion_policy</code> and <code>detailed_audit_logging</code>, for configuration guardrails.</li>
+<li><code>location</code>, with a policy example that permits <code>global</code> and rejects <code>us-central1</code>.</li>
+<li><code>oidc.web_sso_config.response_type</code>, for identity federation-related configuration.</li>
+</ul><p>The merged PR includes policy code, documentation changes, and Terraform examples. The organisational repository has since changed its file layout.</p></div>
+<div class="panel"><h3>How the control works</h3><div class="flow"><div class="step">Terraform resource configuration<small>Author's compliant / non-compliant examples</small></div><div class="arrow">↓</div><div class="step">OPA/Rego policy evaluation<small>Checks approved argument values</small></div><div class="arrow">↓</div><div class="step">Security finding / remediation guidance<small>Project helper produces structured messages</small></div></div></div></div>
+<div class="proof"><strong>Verified result: PR #636 was merged on 1 September 2026.</strong><p>That is evidence of an accepted project contribution. It is not proof of production cloud deployment or a measured risk reduction.</p></div>
+<div class="star"><div><b>S / SITUATION</b><p>Cloud resource settings needed clear, repeatable security assessments.</p></div><div><b>T / TASK</b><p>Cover the relevant workforce identity provider arguments.</p></div><div><b>A / ACTION</b><p>Write Rego policies, Terraform test cases and documentation.</p></div><div><b>R / RESULT</b><p>The contribution was reviewed and merged into the team's repository.</p></div></div>
+<div class="evidence-links">
+<a href="https://github.com/Hardhat-Enterprises/Policy-Deployment-Engine/pull/636" target="_blank" rel="noopener noreferrer">Merged PR #636 ↗<small>Author, timestamps, changed files and review history</small></a>
+<a href="https://github.com/Hardhat-Enterprises/Policy-Deployment-Engine/blob/dev/policies/gcp/Cloud%20IAM/google_iam_workforce_pool_provider/location/policy.rego" target="_blank" rel="noopener noreferrer">Inspect current Rego example ↗<small>Approved location check in the current dev branch</small></a>
+<a href="https://github.com/Hardhat-Enterprises/Policy-Deployment-Engine/blob/dev/policies/gcp/Cloud%20IAM/google_iam_workforce_pool_provider/location/compliant.tf" target="_blank" rel="noopener noreferrer">Compliant Terraform example ↗<small>Fixture using approved value</small></a>
+<a href="projects/cloud-policy-deployment/README.md" target="_blank" rel="noopener noreferrer">Full case-study documentation ↗<small>Source attribution, scope and limitations</small></a>
+</div></section>
+
+<section class="content-section wrap" id="generator"><div class="section-heading"><span class="label">CASE STUDY 02 / PYTHON AUTOMATION</span><span class="section-num">PR MERGED OCT 2026</span></div>
+<h2>Security Impact Skeleton Generator<span class="accent">.</span></h2>
+<p class="lead">A Python development utility that scaffolds missing Terraform and Rego files for policy authors, while protecting existing work and leaving security judgments to the contributor.</p>
+<div class="overview"><div class="stat"><b>9</b><span>Test functions currently in the upstream test module</span></div><div class="stat"><b>0</b><span>Existing files deliberately overwritten by the generator</span></div><div class="stat"><b>#878</b><span>Merged author-attributed pull request</span></div></div>
+<div class="case-grid"><div class="panel"><h3>Workflow from the actual code</h3><div class="flow"><div class="step">Resource JSON<small>Find arguments marked security_impact: true</small></div><div class="arrow">↓</div><div class="step">Path and template resolver<small>Handles nested arguments and package names</small></div><div class="arrow">↓</div><div class="step">Missing policy and Terraform skeletons<small>Generate only if the destination does not exist</small></div><div class="arrow">↓</div><div class="step">Human policy author<small>Complete secure values and remediation logic</small></div></div></div>
+<div class="panel"><h3>Engineering decisions</h3><ul><li>Separates automated file setup from security judgment.</li><li>Handles nested argument paths such as <code>oidc.web_sso_config.response_type</code>.</li><li>Uses existing service-slug conventions and shared platform configuration.</li><li>Prevents accidental overwrites of contributor files.</li><li>Includes pytest coverage for parsing, rendering, paths and overwrite protection.</li></ul></div></div>
+<div class="proof"><strong>Verified result: PR #878 was merged on 18 October 2026.</strong><p>The current source tree contains nine pytest test functions and the README records nine passing tests. I have inspected those files, but did not rerun the upstream test environment for this portfolio.</p></div>
+<div class="star"><div><b>S / SITUATION</b><p>Team contributors spent effort preparing repeated policy-file structures.</p></div><div><b>T / TASK</b><p>Automate safe, consistent scaffolding from resource metadata.</p></div><div><b>A / ACTION</b><p>Build a Python CLI with templates, nested paths, no-overwrite checks and tests.</p></div><div><b>R / RESULT</b><p>Integrated through a reviewed, merged pull request.</p></div></div>
+<div class="evidence-links">
+<a href="https://github.com/Hardhat-Enterprises/Policy-Deployment-Engine/pull/878" target="_blank" rel="noopener noreferrer">Merged PR #878 ↗<small>Direct authorship and project integration</small></a>
+<a href="https://github.com/Hardhat-Enterprises/Policy-Deployment-Engine/blob/dev/scripts/security_impact_skeleton_generator/main.py" target="_blank" rel="noopener noreferrer">Read the Python implementation ↗<small>Original upstream source code</small></a>
+<a href="https://github.com/Hardhat-Enterprises/Policy-Deployment-Engine/blob/dev/scripts/security_impact_skeleton_generator/_tests/test_main.py" target="_blank" rel="noopener noreferrer">Inspect pytest cases ↗<small>Original upstream tests</small></a>
+<a href="projects/security-impact-skeleton-generator/README.md" target="_blank" rel="noopener noreferrer">Read the technical explanation ↗<small>Usage, behaviour and limitations</small></a>
+</div></section>
+
+<section class="content-section wrap" id="quotas"><div class="section-heading"><span class="label">CASE STUDY 03 / POLICY-AS-CODE</span><span class="section-num">MAR – JUN 2026</span></div>
+<h2>GCP Cloud Quotas Guardrails<span class="accent">.</span></h2>
+<p class="lead">Terraform policy contributions for cloud quota configuration, including safety-check handling, quota preferences, validation examples and security rationale.</p>
+<div class="overview"><div class="stat"><b>2</b><span>Cloud Quotas resource types covered</span></div><div class="stat"><b>57</b><span>Files changed in merged PR</span></div><div class="stat"><b>#393</b><span>Accepted contribution in May 2026</span></div></div>
+<div class="case-grid"><div class="panel"><h3>Historical scope</h3><ul>
+<li><code>google_cloud_quotas_quota_adjuster_settings</code></li><li><code>google_cloud_quotas_quota_preference</code></li>
+<li>Rego checks for quota safety, justification and preferred-value settings.</li>
+<li>Paired compliant and non-compliant Terraform examples and resource documentation.</li>
+</ul></div><div class="panel"><h3>What can be checked</h3><p>The original merged PR includes the policy files and Terraform examples in its <strong>Files changed</strong> view. The current upstream <code>dev</code> branch no longer contains those exact historical policy paths.</p><p>For this case, the pull request is the authoritative code evidence rather than an invented link to a current source file.</p></div></div>
+<div class="proof"><strong>Verified result: PR #393 was merged on 23 May 2026.</strong><p>This validates acceptance into the team project. It does not show cloud resources being configured in production.</p></div>
+<div class="star"><div><b>S / SITUATION</b><p>Cloud quota changes require guardrails and clear security rationale.</p></div><div><b>T / TASK</b><p>Contribute checks and test examples for Cloud Quotas resources.</p></div><div><b>A / ACTION</b><p>Prepare OPA/Rego rules, Terraform examples and documentation.</p></div><div><b>R / RESULT</b><p>The team merged the contribution through GitHub PR #393.</p></div></div>
+<div class="evidence-links">
+<a href="https://github.com/Hardhat-Enterprises/Policy-Deployment-Engine/pull/393/files" target="_blank" rel="noopener noreferrer">Review original file changes ↗<small>Historical Rego rules, Terraform fixtures and documentation</small></a>
+<a href="https://github.com/Hardhat-Enterprises/Policy-Deployment-Engine/pull/393" target="_blank" rel="noopener noreferrer">Merged PR #393 ↗<small>Verified author and merge history</small></a>
+<a href="projects/gcp-cloud-quotas-policy/README.md" target="_blank" rel="noopener noreferrer">Read the Quotas case study ↗<small>Limitations and technical interpretation</small></a>
+</div></section>
+
+<section class="content-section wrap" id="cloudvantage"><div class="section-heading"><span class="label">PLACEMENT / AZURE SECURITY</span><span class="section-num">JUL – NOV 2026</span></div>
+<h2>CloudVantage Azure Security Lab<span class="accent">.</span></h2>
+<p class="lead">During my IT Support &amp; Cloud Analyst industry placement, I built Azure environments and worked with cloud security monitoring, identity, networking and Defender recommendations.</p>
+<div class="case-grid"><div class="panel"><h3>Documented work</h3><ul>
+<li>Azure resources and network configuration, including identity and infrastructure basics.</li><li>Security monitoring lab using Microsoft Sentinel and Azure Monitor.</li><li>Microsoft Entra ID, Log Analytics and KQL experience.</li><li>Review of Microsoft Defender security recommendations and troubleshooting.</li></ul><p>This description follows my uploaded LinkedIn PDF. It does not describe a production customer deployment.</p></div>
+<div class="panel"><h3>Next technical evidence to add</h3><ul>
+<li>Sanitised resource group, VNet, VM and Log Analytics screenshots.</li><li>Redacted KQL queries with outputs and explanation.</li><li>Architecture diagram showing the real lab configuration.</li><li>Defender recommendation screenshots and a remediation summary.</li></ul></div></div>
+<div class="notice"><strong>Evidence status</strong><p>A technical summary exists in the supplied LinkedIn profile. Original Azure lab screenshots, KQL scripts and configuration files are not in the currently accessible project sources. I have not invented those records or marked this as a fully verified cloud case study.</p></div>
+<a class="btn" href="index.html#experience">View placement overview ↗</a></section>
+</main>
+<footer><div class="wrap"><span>© 2026 Devin Kalansuriya · Academic capstone and industry placement portfolio</span><a href="index.html">← Return to main portfolio</a></div></footer>
+</body></html>
