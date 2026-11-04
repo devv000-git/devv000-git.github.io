@@ -1,0 +1,6 @@
+category,Attack_type,number_of_attack
+dos,demo_type_a,5
+dos,demo_type_b,7
+u2r,demo_type_c,3
+r2l,demo_type_d,6
+probe,demo_type_e,2
