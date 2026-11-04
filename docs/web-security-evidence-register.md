@@ -1,0 +1,26 @@
+# SIT379 Web Application Security Evidence Register
+
+## Provenance
+
+Original university portfolio: **SIT379 Ethical Hacking**. Task 8.1P appears on PDF pages **224–232** and Task 8.2C on pages **240–255**. The exercises used the intentionally vulnerable **BodgeIt Store** and **DVWA** applications.
+
+The site publishes two cropped, high-contrast copies of evidence already embedded in the PDF. The original source pages remain private.
+
+| Evidence | PDF page | Directly demonstrated | Limit |
+| --- | --- | --- | --- |
+| [reflected-xss.png](../assets/evidence/web-security/reflected-xss.png) | **228**, Figure 3 | Browser alert appeared after submitting script input into a search workflow | Does not show impact beyond execution of the test script |
+| Registration screenshots | **229**, Figures 4–5 | Browser alert and registration confirmation after payload submission | Persistence inferred from the workflow and written report |
+| SQL-injection login | **230**, Figure 6 | Login success after an injected username condition | Application is deliberately vulnerable |
+| Password change GET | **246**, Figure 5 | Burp Repeater HTTP 200 response and password-change confirmation | Does not show a production deployment |
+| Negative basket total | **249**, Figure 8 | Basic Widget quantity **-15** and basket total **($4.00)** | Test shopping basket only |
+| [upload-mime.png](../assets/evidence/web-security/upload-mime.png) | **252**, Figure 11 | Multipart upload request identified an HTML filename while claiming image/jpeg Content-Type | Request alone does not demonstrate successful upload |
+| Upload confirmation | **253**, Figure 12 | DVWA reports the uploaded file was accepted | An isolated DVWA lab |
+| HTML rendered | **254**, Figure 13 | Uploaded HTML message displayed when opened | Not evidence of OS command execution or a remote shell |
+
+## Important interpretation
+
+The portfolio distinguishes **what was directly observed** from **what was concluded**. In particular, the uploaded HTML file rendering in the browser does not prove server-side code execution, even though the university narrative uses the phrase “script executed.”
+
+## Publication and safety
+
+Screenshot excerpts contain only controlled training applications. The complete university submission, student identifiers and potentially sensitive materials are not published. The case study describes vulnerabilities at an analytical level and links to remediation guidance without distributing an automated attack tool.
