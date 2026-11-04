@@ -85,6 +85,7 @@ The public demo uses fictional examples and browser-local storage. It does not c
 
 The following sanitised code examples are published for recruiter review:
 
+- [Adapted React dashboard component](code-examples/frontend/TaskDashboardExcerpt.jsx), covering state, hour totals, reflections and CRUD controls
 - [Frontend API client](code-examples/frontend/api.js)
 - [Python Azure Functions implementation reference](code-examples/backend/function_app_reference.py)
 - [Anonymised Terraform Azure resource map](code-examples/terraform/azure-resources.tf)
