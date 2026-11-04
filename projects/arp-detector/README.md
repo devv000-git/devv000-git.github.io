@@ -45,3 +45,19 @@ A changing ARP mapping is an **indicator**, not proof of malicious spoofing. Leg
 ## Security
 
 This repository contains defensive monitoring code only and synthetic observations for tests. It does not include attack automation, credentials or live packet captures.
+
+## Original university evidence
+
+The following images were cropped from the university submission and enhanced for contrast. They are distinct from output of the reconstructed Python code.
+
+**Baseline ARP mapping, SIT379 page 132**
+
+![Original ARP mapping observed in laboratory screenshot](../../assets/evidence/arp/baseline-original-crop.png)
+
+**Changed mapping alert, SIT379 page 133**
+
+![Original possible ARP spoofing detection alert](../../assets/evidence/arp/alert-original-crop.png)
+
+See [the evidence register](../../docs/arp-evidence-register.md) for source page references, image processing and limits on what the screenshots prove.
+
+**[View the public portfolio case study](https://devv000-git.github.io/#project/arp-detector)**
