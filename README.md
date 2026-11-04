@@ -2,9 +2,19 @@
 
 **Live website:** https://devv000-git.github.io/
 
-A public record of university laboratory investigations, defensive security projects and technical exercises completed during the Bachelor of Cybersecurity at Deakin University.
+A public portfolio combining university cybersecurity investigations with a CloudVantage IT Support & Cloud Analyst industry placement and a Hardhat Enterprises cloud security policy-as-code capstone.
 
 The portfolio supports graduate and junior roles in security operations, cybersecurity analysis, digital forensics and security engineering.
+
+## Experience and cloud security
+
+- **CloudVantage Australia:** IT Support & Cloud Analyst, industry placement, July–November 2026. Azure infrastructure, identity, Microsoft Sentinel, Azure Monitor, Log Analytics/KQL and security recommendations.
+- **Hardhat Enterprises:** Policy Author in the industry capstone Policy Deployment Engine, March–September 2026. Terraform and GCP IAM resource review, OPA/Rego controls, test configurations and Python automation.
+- **Hardhat Enterprises:** Leadership Team Member, June–September 2026. Capstone contributor coordination and technical guidance.
+- **Cloud projects listed on LinkedIn:** Policy Deployment Engine, Security Impact Skeleton Generator, and GCP Cloud Quotas Policy Automation. Further source-level evidence is pending.
+- **Professional qualifications:** Microsoft Certified: Azure Fundamentals (AZ-900), Google Cybersecurity Professional Certificate V2 and Google AI Professional Certificate. Other courses and programmes are listed in the live website.
+
+The experience titles, dates and credential names are based on the profile owner's seven-page LinkedIn PDF. See the [source notes](docs/linkedin-profile-source-notes.md) for exact pages and limits. The original PDF is not stored in the public repository.
 
 ## Featured work
 
