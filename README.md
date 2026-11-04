@@ -26,11 +26,11 @@ The [industry project page](industry-projects.html) covers three source-verified
 | [Python Security Impact Skeleton Generator](industry-projects.html#generator) | [Merged PR #878](https://github.com/Hardhat-Enterprises/Policy-Deployment-Engine/pull/878), [Python source](https://github.com/Hardhat-Enterprises/Policy-Deployment-Engine/blob/dev/scripts/security_impact_skeleton_generator/main.py), [pytest source](https://github.com/Hardhat-Enterprises/Policy-Deployment-Engine/blob/dev/scripts/security_impact_skeleton_generator/_tests/test_main.py), [case study](projects/security-impact-skeleton-generator/README.md) |
 | [GCP Cloud Quotas policies](industry-projects.html#quotas) | [Merged PR #393](https://github.com/Hardhat-Enterprises/Policy-Deployment-Engine/pull/393/files) and [technical write-up](projects/gcp-cloud-quotas-policy/README.md) |
 | [Azure security monitoring lab](industry-projects.html#cloudvantage) | [Dated lab configuration and limitations](projects/azure-security-monitoring-lab/README.md) from 7–11 September 2026 |
-| [Azure placement task dashboard](industry-projects.html#dashboard) | [Terraform, React, Azure Functions and Table Storage MVP](projects/azure-placement-dashboard/README.md), 3–4 September 2026 |
+| [Azure placement task dashboard](industry-projects.html#dashboard) | [Live privacy-safe demo](demos/placement-dashboard/), [reviewed React/Python/Terraform implementation evidence](projects/azure-placement-dashboard/README.md), and [security source review](docs/placement-dashboard-source-review.md) |
 
 GitHub [evidence register](docs/hardhat-source-evidence-register.md) distinguishes merged work from unmerged PRs, historical code paths and unverified production claims.
 
-The [CloudVantage logbook evidence register](docs/cloudvantage-logbook-evidence-register.md) maps individual dated entries to the Azure monitoring lab and deployed React/Python task dashboard. It distinguishes configured features, successful CRUD testing and unverified monitoring outcomes. The upstream code remains in the Hardhat Enterprises team repository.
+The [CloudVantage logbook evidence register](docs/cloudvantage-logbook-evidence-register.md) maps individual dated entries to the Azure monitoring lab and deployed React/Python task dashboard. The original VS Code source ZIP was also reviewed, with sensitive local configuration and Terraform state excluded from publication. It distinguishes configured features, successful CRUD testing and unverified monitoring outcomes. The upstream code remains in the Hardhat Enterprises team repository.
 
 ## Featured work
 
