@@ -14,7 +14,7 @@ These are **different memory images from different lab tasks** and their evidenc
 | **213** | Figure 4 | `pslist`: `ngentask.exe` PID 5932, PPID 2748 | Identifies process relationship |
 | **214** | Figure 6 | `ldrmodules`: module-list mismatches; **mapped main executable path is visible** | Mismatches justify investigation but do not by themselves prove hollowing |
 | **216–217** | Figures 10 and 12 | `vadinfo`: private regions with executable memory permissions | Supports suspected injected code |
-| **218** | Figure 14 | `malfind`: PID 5932 and private RWX regions | Strongest injected-code indicator in the source |
+| **218** | Figure 14 | [Published `malfind` crop](../assets/evidence/memory-forensics/ngentask-malfind.png): PID 5932 and private RWX regions | Strongest injected-code indicator in the source |
 
 **Critical qualification:** The report explicitly corrects an earlier interpretation. A visible mapped path for the primary `ngentask.exe` image means the `ldrmodules` screenshot must **not** be described as showing a completely missing executable path. The final source assessment is **process injection indicators**, with hollowing checks documented, not a proven replacement of the main mapped image.
 
@@ -27,9 +27,14 @@ These are **different memory images from different lab tasks** and their evidenc
 | **223** | Figure 3 | Calculator conversion `C68` hex = 3176 decimal | PID correlation |
 | **224** | Figure 4 | Process Explorer properties for `svchost.exe` PID 3176 | Path, parent and current directory |
 | **225** | Figure 5 | Volatility `PsTree`: parent `TaskSample9_1.exe` PID 2784 and child `svchost.exe` PID 3176 | Supports process ancestry |
-| **225** | Figure 6 | Volatility `HollowProcesses`: RWX, non-file-backed executable VAD and suspicious loader entry | Supports hollowing indicators |
+| **225** | Figure 6 | [Published `HollowProcesses` crop](../assets/evidence/memory-forensics/svchost-hollowprocesses.png): RWX, non-file-backed executable VAD and suspicious loader entry | Supports hollowing indicators |
 
 **Qualification:** The source report concludes this process was hollowed. The available screenshot directly records a `HollowProcesses` flag and unusual memory permissions. Further forensic validation would normally include inspecting the region contents, on-disk executable, and execution telemetry.
+
+
+### Screenshot publication details
+
+Two original Volatility output crops are now published. They were copied from the figures embedded in the university PDF, tightly cropped to relevant rows and converted to high-contrast black-and-white. The screenshots are historical lab evidence. Text, process IDs and memory-permission fields have not been rewritten. The full memory images are not distributed.
 
 ## Publication standard
 
