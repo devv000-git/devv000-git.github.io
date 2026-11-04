@@ -14,7 +14,7 @@ The portfolio supports graduate and junior roles in security operations, cyberse
 - **Verified Hardhat GitHub contributions:** Policy Deployment Engine GCP IAM security policies ([merged PR #636](https://github.com/Hardhat-Enterprises/Policy-Deployment-Engine/pull/636)), Security Impact Skeleton Generator ([merged PR #878](https://github.com/Hardhat-Enterprises/Policy-Deployment-Engine/pull/878)), and Cloud Quotas policy automation ([merged PR #393](https://github.com/Hardhat-Enterprises/Policy-Deployment-Engine/pull/393)). Original upstream code and review records are linked.
 - **Professional qualifications:** Microsoft Certified: Azure Fundamentals (AZ-900), Google Cybersecurity Professional Certificate V2 and Google AI Professional Certificate. Other courses and programmes are listed in the live website.
 
-The experience titles, dates and credential names are based on the profile owner's seven-page LinkedIn PDF. See the [source notes](docs/linkedin-profile-source-notes.md) for exact pages and limits. The original PDF is not stored in the public repository.
+Employment titles, dates and credentials are based on the profile owner's LinkedIn PDF. Azure placement project details have additionally been checked against a dated private placement logbook. See the [source notes](docs/linkedin-profile-source-notes.md) for exact pages and limits. The original PDF is not stored in the public repository.
 
 ## Verified industry case studies
 
@@ -25,9 +25,12 @@ The [industry project page](industry-projects.html) covers three source-verified
 | [GCP IAM security policies](industry-projects.html#iam) | [Merged PR #636](https://github.com/Hardhat-Enterprises/Policy-Deployment-Engine/pull/636) and [technical write-up](projects/cloud-policy-deployment/README.md) |
 | [Python Security Impact Skeleton Generator](industry-projects.html#generator) | [Merged PR #878](https://github.com/Hardhat-Enterprises/Policy-Deployment-Engine/pull/878), [Python source](https://github.com/Hardhat-Enterprises/Policy-Deployment-Engine/blob/dev/scripts/security_impact_skeleton_generator/main.py), [pytest source](https://github.com/Hardhat-Enterprises/Policy-Deployment-Engine/blob/dev/scripts/security_impact_skeleton_generator/_tests/test_main.py), [case study](projects/security-impact-skeleton-generator/README.md) |
 | [GCP Cloud Quotas policies](industry-projects.html#quotas) | [Merged PR #393](https://github.com/Hardhat-Enterprises/Policy-Deployment-Engine/pull/393/files) and [technical write-up](projects/gcp-cloud-quotas-policy/README.md) |
-| [CloudVantage Azure monitoring lab](industry-projects.html#cloudvantage) | [Source-backed overview and missing-evidence checklist](projects/cloudvantage-azure-security-lab/README.md) |
+| [Azure security monitoring lab](industry-projects.html#cloudvantage) | [Dated lab configuration and limitations](projects/azure-security-monitoring-lab/README.md) from 7–11 September 2026 |
+| [Azure placement task dashboard](industry-projects.html#dashboard) | [Terraform, React, Azure Functions and Table Storage MVP](projects/azure-placement-dashboard/README.md), 3–4 September 2026 |
 
-GitHub [evidence register](docs/hardhat-source-evidence-register.md) distinguishes merged work from unmerged PRs, historical code paths and unverified production claims. The upstream code remains in the Hardhat Enterprises team repository.
+GitHub [evidence register](docs/hardhat-source-evidence-register.md) distinguishes merged work from unmerged PRs, historical code paths and unverified production claims.
+
+The [CloudVantage logbook evidence register](docs/cloudvantage-logbook-evidence-register.md) maps individual dated entries to the Azure monitoring lab and deployed React/Python task dashboard. It distinguishes configured features, successful CRUD testing and unverified monitoring outcomes. The upstream code remains in the Hardhat Enterprises team repository.
 
 ## Featured work
 
