@@ -81,7 +81,7 @@ The [ARP detector folder](projects/arp-detector/) contains a documented Python/S
 
 ## Credentials
 
-- Bachelor of Cybersecurity, Deakin University, completed October 2026
+- Bachelor of Cybersecurity, Deakin University · **Distinction result** · **Minor in Security Management** · Degree requirements completed October 2026, formal graduation expected February 2027
 - Microsoft Certified: Azure Fundamentals (AZ-900)
 - Google Cybersecurity Professional Certificate
 - Google AI Professional Certificate
