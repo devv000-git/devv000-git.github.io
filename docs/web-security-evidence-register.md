@@ -12,9 +12,9 @@ The site publishes two cropped, high-contrast copies of evidence already embedde
 | Registration screenshots | **229**, Figures 4–5 | Browser alert and registration confirmation after payload submission | Persistence inferred from the workflow and written report |
 | SQL-injection login | **230**, Figure 6 | Login success after an injected username condition | Application is deliberately vulnerable |
 | Password change GET | **246**, Figure 5 | Burp Repeater HTTP 200 response and password-change confirmation | Does not show a production deployment |
-| Negative basket total | **249**, Figure 8 | Basic Widget quantity **-15** and basket total **($4.00)** | Test shopping basket only |
+| [basket-result.png](../assets/evidence/web-security/basket-result.png) | **249**, Figure 8 | Basic Widget quantity **-15** and basket total **($4.00)** | Test shopping basket only |
 | [upload-mime.png](../assets/evidence/web-security/upload-mime.png) | **252**, Figure 11 | Multipart upload request identified an HTML filename while claiming image/jpeg Content-Type | Request alone does not demonstrate successful upload |
-| Upload confirmation | **253**, Figure 12 | DVWA reports the uploaded file was accepted | An isolated DVWA lab |
+| [upload-confirmation.png](../assets/evidence/web-security/upload-confirmation.png) | **253**, Figure 12 | DVWA reports the uploaded file was accepted | An isolated DVWA lab |
 | HTML rendered | **254**, Figure 13 | Uploaded HTML message displayed when opened | Not evidence of OS command execution or a remote shell |
 
 ## Important interpretation
