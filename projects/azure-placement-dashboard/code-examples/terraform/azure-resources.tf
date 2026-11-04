@@ -2,8 +2,14 @@
 # Reference only. Cloud provisioning is NOT required for the public demo.
 # Pass identifiers and credentials using a secure deployment process.
 
-variable "subscription_id" { type = string; sensitive = true }
-variable "location" { type = string; default = "australiaeast" }
+variable "subscription_id" {
+  type      = string
+  sensitive = true
+}
+variable "location" {
+  type    = string
+  default = "australiaeast"
+}
 variable "resource_group_name" { type = string }
 variable "storage_account_name" { type = string }
 variable "function_app_name" { type = string }
@@ -13,10 +19,16 @@ variable "static_web_app_name" { type = string }
 terraform {
   required_version = ">= 1.6.0"
   required_providers {
-    azurerm = { source = "hashicorp/azurerm", version = "~> 4.0" }
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "~> 4.0"
+    }
   }
 }
-provider "azurerm" { features {} subscription_id = var.subscription_id }
+provider "azurerm" {
+  features {}
+  subscription_id = var.subscription_id
+}
 
 resource "azurerm_resource_group" "portfolio" {
   name = var.resource_group_name
