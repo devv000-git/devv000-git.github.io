@@ -15,7 +15,7 @@ The portfolio supports graduate and junior roles in security operations, cyberse
 | [Malware behaviour and ATT&CK mapping](https://devv000-git.github.io/#project/malware-analysis) | Ghidra, VirusTotal, MITRE ATT&CK | Original Ghidra and VirusTotal screenshot crops, documented ATT&CK mapping and confidence limits |
 | [Windows memory forensics](https://devv000-git.github.io/#project/memory-forensics) | Volatility, FTK Imager | Two separately sourced investigations, PID correlation, memory-region findings and page-referenced evidence register |
 | [Web application security assessment](https://devv000-git.github.io/#project/web-security) | Burp Suite, BodgeIt Store, DVWA | Four original screenshot crops, nine documented vulnerabilities and behaviours, remediation recommendations |
-| [Cybersecurity data analytics](https://devv000-git.github.io/#project/security-analytics) | Python, pandas, matplotlib | Source report references, further screenshots being prepared |
+| [Cybersecurity data analytics](https://devv000-git.github.io/#project/security-analytics) | Python, pandas, matplotlib | Three transparently recreated figures, source-derived tables, reproducible Python code and seven unit tests |
 
 Seven additional supporting investigations are accessible through the [projects catalogue](https://devv000-git.github.io/#projects).
 
@@ -26,7 +26,7 @@ Seven additional supporting investigations are accessible through the [projects 
 - Evidence galleries are available for [SIT379 ARP detector screenshots](docs/arp-evidence-register.md), [SIT327 packet-capture analysis](docs/network-forensics-evidence-register.md), and [SIT324 malware analysis](docs/malware-analysis-evidence-register.md).
 - The [SIT324 Windows memory forensics project](docs/memory-forensics-evidence-register.md) now has a detailed, page-referenced evidence register and two clearly separated investigations. Original memory screenshots are not yet published in that case study.
 - The [SIT379 web application security project](docs/web-security-evidence-register.md) includes original XSS, negative-basket and file-upload evidence, with private request credentials excluded.
-- [SIT379 Web Security](docs/web-security-evidence-register.md) has two original screenshot excerpts and page-specific validation of five vulnerability demonstrations.
+- The [SIT384 analytics case study](docs/sit384-analytics-evidence-register.md) provides three **figure reconstructions**, not original screenshots. Its original dataset files are unavailable, and the publicly tested code is labelled as reconstructed.
 - Where code has been reconstructed from a report screenshot, it is labelled as reconstructed. It must not be mistaken for the exact original submitted source.
 - Observed alerts are not automatically proof of compromise. Case studies document limits and alternative explanations.
 - Original university reports, malicious samples, credentials and private data are not distributed here.
@@ -44,6 +44,10 @@ python3 -m http.server 8000
 ```
 
 Open `http://localhost:8000`. Changes to the `main` branch trigger GitHub Pages deployment.
+
+## Reconstructed security analytics
+
+The [SIT384 analytics folder](projects/cybersecurity-data-analytics/) contains a portable Python plotting implementation, an example transcribed from an original figure, synthetic test fixtures, and [automated tests](.github/workflows/analytics-tests.yml). It is not a real-time SOC dashboard or a replacement for the unavailable source datasets.
 
 ## Reconstructed ARP monitor
 
