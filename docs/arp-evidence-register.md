@@ -4,7 +4,7 @@
 
 - **Unit:** SIT379 Ethical Hacking, Deakin University, 2026
 - **Original exercise:** Module 5, Task 5.2C
-- **Source document:** `SIT379-s223136653-portfolio.pdf` (private, not distributed)
+- **Source document:** Original SIT379 portfolio report (private PDF, not distributed)
 - **Project type:** Authorised university networking lab
 - **Nature of screenshots:** Authentic cropped extracts from the original assessment report, not images from the later reconstructed implementation.
 
