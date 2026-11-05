@@ -1,10 +1,10 @@
 # Hardhat Enterprises source-evidence register
 
-Updated 4 November 2026. Verification was performed by reading the public `Hardhat-Enterprises/Policy-Deployment-Engine` repository and GitHub pull-request records.
+Verified against the public `Hardhat-Enterprises/Policy-Deployment-Engine` repository and GitHub pull-request records.
 
 ## Authorship and merge status
 
-The repository is an **organisational team capstone**. The following PRs show the portfolio owner's GitHub username `devv000-git` as author and an actual merge, rather than merely a submitted or closed PR.
+The repository is an **organisational team capstone**. The following PRs show my GitHub username `devv000-git` as author and an actual merge, rather than merely a submitted or closed PR.
 
 | PR | Title | Author | Merge date (UTC) | Verification |
 | --- | --- | --- | --- | --- |
@@ -46,12 +46,12 @@ Search also identified PRs #638, #637, #635, #534, #520, #450, #449, #448, #447 
 
 ## Scope and intellectual property
 
-- The upstream repository is owned by **Hardhat Enterprises**, not the portfolio owner.
-- These cases describe **the owner's verified contributions to the team**, not sole ownership or exclusive development of the full PDE.
+- The upstream repository is owned by **Hardhat Enterprises**, not me.
+- These cases describe **my verified contributions to the team**, not sole ownership or exclusive development of the full PDE.
 - The personal portfolio links to upstream source rather than copying substantial code or assigning it a different licence.
 - No production deployment, compliance certification, attack prevention rate, or measured development-time saving is claimed.
 - Historical project dates on LinkedIn and later merge dates are kept distinct.
 
 ## LinkedIn and portfolio sources
 
-The supplied seven-page LinkedIn PDF documents the capstone role and project names. Its section on page 3 describes Terraform security-impact assessments, OPA/Rego, compliant/non-compliant configurations, Python automation and review workflow. Page 6 lists individual project titles and dates. The source PDF itself remains private and is not committed.
+The capstone roles and dates are summarised on the main portfolio. The linked pull requests provide stronger, independently accessible evidence of the code contributions.
