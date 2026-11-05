@@ -14,7 +14,7 @@ The portfolio supports graduate and junior roles in security operations, cyberse
 - **Verified Hardhat GitHub contributions:** Policy Deployment Engine GCP IAM security policies ([merged PR #636](https://github.com/Hardhat-Enterprises/Policy-Deployment-Engine/pull/636)), Security Impact Skeleton Generator ([merged PR #878](https://github.com/Hardhat-Enterprises/Policy-Deployment-Engine/pull/878)), and Cloud Quotas policy automation ([merged PR #393](https://github.com/Hardhat-Enterprises/Policy-Deployment-Engine/pull/393)). Original upstream code and review records are linked.
 - **Professional qualifications:** Microsoft Certified: Azure Fundamentals (AZ-900), Google Cybersecurity Professional Certificate V2 and Google AI Professional Certificate. Other courses and programmes are listed in the live website.
 
-Employment titles, dates and credentials are based on the profile owner's LinkedIn PDF. Azure placement project details have additionally been checked against a dated private placement logbook. See the [source notes](docs/linkedin-profile-source-notes.md) for exact pages and limits. The original PDF is not stored in the public repository.
+The portfolio describes industry placement and capstone work, with technical evidence linked in the individual project case studies.
 
 ## Verified industry case studies
 
