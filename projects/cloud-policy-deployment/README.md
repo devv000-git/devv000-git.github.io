@@ -52,6 +52,6 @@ This establishes a reviewed, accepted contribution. It does **not** establish th
 
 ## Scope, provenance and reuse
 
-This is a **team capstone repository**, not a sole-authored application. The PR attribution confirms the user's contribution. Source code is linked to its original public repository, not copied wholesale into this personal portfolio. Permission to view public code does not imply permission to relicense or redistribute team work.
+This is a **team capstone repository**, not a sole-authored application. The merged pull request confirms my contribution under the `devv000-git` account. Source code is linked to its original public repository, not copied wholesale into this personal portfolio. Permission to view public code does not imply permission to relicense or redistribute team work.
 
 Other PRs authored by the same user were closed without merging. They should not be represented as merged contributions.
