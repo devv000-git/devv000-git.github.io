@@ -31,9 +31,9 @@ The logbook states that:
 
 ### 22 September 2026: supporting automation
 
-A later entry describes the Python import script using API requests to migrate placement records to Azure Table Storage with duplicate checks. The logbook does not include its actual source code or measured migration result.
+A later entry describes importing placement records through API requests with duplicate checks. The implementation includes import logic, although no verified migration totals or timings are reported.
 
-## Architecture reconstructed from the logbook
+## Application architecture
 
 ```text
 Browser
@@ -50,7 +50,7 @@ Terraform → Resource group, storage account / Blob container,
             Azure Functions / hosting resources, Static Web App
 ```
 
-This is **a text architecture reconstruction from recorded implementation steps**. It should be replaced by an actual configuration diagram when the original code becomes available.
+This simplified architecture is consistent with the React, Python and Terraform implementation and the documented deployment.
 
 ## Result
 
@@ -63,9 +63,9 @@ The logbook documents a **deployed and demonstrated MVP** whose task records wer
 **Action:** Provisioned Azure resources with Terraform, connected a React frontend to Python Functions and Table Storage, tested CRUD tasks and demonstrated the deployed application.  
 **Result:** A functioning cloud-hosted MVP was recorded in the placement logbook and shown to the supervisor.
 
-## Verified source files from the original VS Code project
+## Implementation and source evidence
 
-I have now reviewed the full `internship-portfolio-portal.zip` supplied by the project owner. It contains the original React/Vite UI, the Python Azure Functions backend, Terraform infrastructure, import scripts and detailed documentation.
+The project includes a React/Vite user interface, a Python Azure Functions backend, Terraform infrastructure definitions and supporting import logic. These components support the following functional capabilities:
 
 | Original source | What it demonstrates |
 | --- | --- |
@@ -75,7 +75,7 @@ I have now reviewed the full `internship-portfolio-portal.zip` supplied by the p
 | `terraform/main.tf` | Resource group, storage account/table, private Blob container, Linux Functions App, service plan and Azure Static Web App |
 | `scripts/import_full_logbook.py` | Existing-task checks and logbook import logic, withheld because it includes original placement entries |
 
-These are **source-verified technical features**, not just descriptions from a logbook.
+These implementation details complement the functional testing recorded during the placement.
 
 ## Interactive public demonstration
 
@@ -89,15 +89,13 @@ The following sanitised code examples are published for recruiter review:
 - [Frontend API client](code-examples/frontend/api.js)
 - [Python Azure Functions implementation reference](code-examples/backend/function_app_reference.py)
 - [Anonymised Terraform Azure resource map](code-examples/terraform/azure-resources.tf)
-- [Original ZIP source review and security notes](../../docs/placement-dashboard-source-review.md)
+- [Architecture and engineering review](../../docs/placement-dashboard-source-review.md)
 
-## Security review and limits
+## Security and release scope
 
-The uploaded project contained `.env`, Azure Functions `local.settings.json`, Terraform state and backup files, prior Git history and original placement entries. These **are excluded from public publication**.
+The original dashboard was a supervised placement MVP. User authentication was not completed, and the implementation is **not presented as a secure production deployment**. A future cloud release would require identity controls, authorisation, stricter input validation and secure configuration management.
 
-The original Python Functions app used **anonymous HTTP authorization** for task CRUD. The documentation explains that Microsoft Entra integration was deferred because the tenant required administrator approval. CORS and HTTPS settings do not provide end-user authentication. The public demo intentionally does not call this API. The public Python reference is security-adjusted, not an unchanged copy of the original.
-
-If the original Azure storage account is still active, its keys should be rotated because the private archive contains credential-bearing settings and Terraform state. Any new live backend requires proper identity, authorisation and access controls.
+The public demonstration uses fictional data stored in the browser, with no calls to the historical Azure application or access to real placement information. The published Python and Terraform samples are anonymised or adapted for explanation and do not form a ready-to-deploy system.
 
 ## Additional evidence that would strengthen the project
 
@@ -108,6 +106,6 @@ If the original Azure storage account is still active, its keys should be rotate
 
 ## Publication boundaries
 
-The private placement logbook itself is **not** published. This public description excludes company records, customer information, subscription IDs, credentials and infrastructure secrets.
+Only technical descriptions, selected code examples and fictional demonstration data are shared publicly. Company records, real task entries and environment-specific settings are excluded.
 
 [Full placement case study](https://devv000-git.github.io/industry-projects.html#dashboard)
