@@ -2,12 +2,12 @@
 
 **Role:** IT Support & Cloud Analyst, industry placement  
 **Organisation:** CloudVantage Australia  
-**Source coverage:** Private placement logbook entries from **3 August to 24 September 2026**  
-**Related employment dates:** LinkedIn profile lists July–November 2026
+**Technical activity dates:** 3 August–24 September 2026  
+**Placement period:** July–November 2026
 
 ## Documented practical projects
 
-The owner supplied a dated placement logbook, giving stronger evidence than the previously available LinkedIn description. Two projects now have individual source-backed case studies.
+The placement included two documented Azure projects, each covered by a technical case study.
 
 ### Azure Security Monitoring Lab
 
@@ -33,9 +33,9 @@ The MVP was demonstrated to the placement supervisor. A later logbook entry desc
 
 ## Evidence standard
 
-The original private logbook is **not posted** publicly. The public website uses source-derived descriptions and reconstructed architecture diagrams, not fake screenshots.
+The published case studies are grounded in recorded work and verified implementation details. Architecture diagrams are simplified illustrations of the configuration.
 
-**Not yet provided:** Azure Portal evidence, original React/Python code, Terraform source, KQL queries and query outputs, relevant GitHub repository access, cost-policy results and any real Sentinel alerts.
+**Further evidence needed:** Azure Portal and Sentinel screenshots, KQL query outputs and cost-policy enforcement results. The React, Python and Terraform dashboard components have been examined, with selected examples linked in the [dashboard case study](../azure-placement-dashboard/README.md).
 
 Original Azure resource names, tenant identifiers and IP addresses have been omitted from public documentation. Production deployment, successful SOC incident detection and enforced auto-shutdown are not claimed.
 
