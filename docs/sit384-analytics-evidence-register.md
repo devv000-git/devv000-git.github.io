@@ -38,4 +38,4 @@ No claim is made that the reconstructed code is the student's original submitted
 
 ## Publication boundaries
 
-Original PDFs, student identifiers, private desktop file paths and unprovided datasets are excluded. Charts on the website are **recreations drawn from published lab figures** unless explicitly identified as original screenshot crops. No network traffic, SOC logs, client incidents or real-time detection statistics are implied.
+Original PDFs, student identifiers, private desktop file paths and unprovided datasets are excluded. Charts on the website are **recreations from figures in the university assessment report** unless explicitly identified as original screenshot crops. No network traffic, SOC logs, client incidents or real-time detection statistics are implied.
