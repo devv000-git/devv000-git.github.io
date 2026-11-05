@@ -38,20 +38,17 @@ Exactly **nine** `test_*` functions are visible in the current test module. The 
 - [Merged PR #393](https://github.com/Hardhat-Enterprises/Policy-Deployment-Engine/pull/393)
 - [Historical changes](https://github.com/Hardhat-Enterprises/Policy-Deployment-Engine/pull/393/files)
 
-**Critical:** The current `dev` branch did not contain the original Cloud Quotas policy paths from PR #393 when reviewed. The PR diff is used to prove the historical contribution. Do not present outdated paths as live.
+**Critical:** The Cloud Quotas contribution is preserved in the merged PR diff, while its original file paths are no longer present in the current `dev` branch.
 
-## Caution about other PRs
+## Verified contribution boundary
 
-Search also identified PRs #638, #637, #635, #534, #520, #450, #449, #448, #447 and #380 under the same author account. Their GitHub API response showed `merged: false`. These are **not** counted as merged contributions on the portfolio. The author may have prepared work in them, but the project integration status must remain distinct.
+This portfolio features only confirmed merged pull requests. Other submissions are not counted as merged work.
 
 ## Scope and intellectual property
 
-- The upstream repository is owned by **Hardhat Enterprises**, not me.
+- The upstream repository belongs to **Hardhat Enterprises** and is a collaborative team project.
 - These cases describe **my verified contributions to the team**, not sole ownership or exclusive development of the full PDE.
 - The personal portfolio links to upstream source rather than copying substantial code or assigning it a different licence.
 - No production deployment, compliance certification, attack prevention rate, or measured development-time saving is claimed.
 - Historical project dates on LinkedIn and later merge dates are kept distinct.
 
-## LinkedIn and portfolio sources
-
-The capstone roles and dates are summarised on the main portfolio. The linked pull requests provide stronger, independently accessible evidence of the code contributions.
