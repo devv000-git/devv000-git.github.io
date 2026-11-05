@@ -18,7 +18,7 @@ Create a minimally exposed Windows Server lab, connect it to a central Log Analy
 | Date | Logbook evidence | Interpretation |
 | --- | --- | --- |
 | **7 Sep 2026** | Created a dedicated resource group in Australia East, created a Log Analytics workspace, and enabled Sentinel on the workspace. | Initial monitoring environment established |
-| **8 Sep 2026** | Deployed a Windows Server VM with VNet, subnet, public IP, NIC and NSG. Restricted inbound RDP to the user's then-current public IP. | A least-exposure network control was configured |
+| **8 Sep 2026** | Deployed a Windows Server VM with VNet, subnet, public IP, NIC and NSG. Restricted inbound RDP to an explicitly permitted source IP. | A least-exposure network control was configured |
 | **9 Sep 2026** | Created a Data Collection Rule for Windows Event Logs, linked the rule to the VM, and configured delivery to Log Analytics. | A log collection path was configured. Successful sustained ingestion or alert firing is not established solely by the logbook |
 | **10 Sep 2026** | Created an Azure cost budget and **began implementing** a custom Azure Policy intended to enforce VM auto-shutdown. | Budget established. The policy's completion and enforcement are **not** proved |
 | **11 Sep 2026** | Configured Microsoft Entra diagnostic settings intended to forward identity audit logs to Log Analytics. The source explicitly records a licensing limitation in the Azure for Students tenant. | Configuration attempt documented. **Full Entra log ingestion was not available** |
@@ -50,7 +50,7 @@ This diagram is **reconstructed from logbook text**, not exported from the Azure
 
 ## Defensive interpretation
 
-The strongest documented security decision is the restricted RDP access. The logbook states that the VM's RDP rule allowed the user's public IP rather than unrestricted internet access. The collection rule establishes how Windows Event Logs were intended to reach Azure Monitor and Log Analytics.
+The strongest documented security decision is the restricted RDP access. The VM's RDP rule was limited to a permitted source IP rather than unrestricted internet access. The collection rule establishes how Windows Event Logs were intended to reach Azure Monitor and Log Analytics.
 
 **Do not overstate:** The logbook does not contain an alert investigation, detection results, specific KQL queries, event counts, incident-response outcomes, or proof that the auto-shutdown policy was effective. Those claims require additional original evidence.
 
@@ -69,7 +69,7 @@ The strongest documented security decision is the restricted RDP access. The log
 - Budget and Azure Policy screenshots confirming actual enforcement.
 - Azure Entra diagnostic configuration and details of licensing restrictions.
 
-The uploaded logbook is **private and has not been published**. It is a personal placement reflection record, not a public infrastructure configuration file. Names of the internal resources and IP addresses are intentionally omitted from this public README.
+This public case study excludes internal resource identifiers and network addresses. It is based on documented configuration steps and does not include a running cloud environment.
 
 ## Related evidence
 
