@@ -12,8 +12,8 @@
 
 | File | Source PDF page | What it demonstrates | Processing |
 | --- | --- | --- | --- |
-| [baseline-original-crop.png](../../assets/evidence/arp/baseline-original-crop.png) | 132 | Original monitoring output records an IP-to-MAC mapping | Cropped and high-contrast monochrome conversion |
-| [alert-original-crop.png](../../assets/evidence/arp/alert-original-crop.png) | 133 | Script reports a possible ARP spoofing event with the old and new MAC addresses | Cropped and high-contrast monochrome conversion |
+| [baseline-original-crop.png](../assets/evidence/arp/baseline-original-crop.png) | 132 | Original monitoring output records an IP-to-MAC mapping | Cropped and high-contrast monochrome conversion |
+| [alert-original-crop.png](../assets/evidence/arp/alert-original-crop.png) | 133 | Script reports a possible ARP spoofing event with the old and new MAC addresses | Cropped and high-contrast monochrome conversion |
 
 The source report also contains a screenshot of the original Scapy script (page 131) and a controlled network simulation (page 132). These have not yet been published as standalone images.
 
