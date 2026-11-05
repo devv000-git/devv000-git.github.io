@@ -9,7 +9,7 @@ Two distinct exercises were used:
 - Task **4.1P**, PDF pages **50–56**: `attack-type-frequency.csv`, four attack categories and two distinct metrics.
 - Task **4.2C**, PDF pages **57–63**: `Malicious_or_criminal_attacks_breakdown-Top_five_sectors_July-Dec-2023.csv`, incident categories by five sectors.
 
-**The assessment report includes code and charts but not the original CSV files.** The report embeds code and chart outputs, not the original source data files.
+**The original assessment report includes source-code extracts and chart outputs, but not the raw CSV datasets.**
 
 ## Evidence mapping
 
