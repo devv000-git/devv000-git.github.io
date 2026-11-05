@@ -48,4 +48,4 @@ The current `dev` repository tree no longer contains the original Cloud Quotas p
 
 ## Attribution and limitations
 
-This is a contribution within an organisational capstone team. The author of PR #393 is the portfolio owner. The code is not copied into the personal portfolio because the upstream project may have its own reuse requirements. Current production deployment, current file layout and test status are not asserted.
+This is a contribution within an organisational capstone team. PR #393 was authored by GitHub user `devv000-git`. The code is not copied into the personal portfolio because the upstream project may have its own reuse requirements. Current production deployment, current file layout and test status are not asserted.
