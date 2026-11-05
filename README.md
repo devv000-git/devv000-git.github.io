@@ -18,7 +18,7 @@ The portfolio describes industry placement and capstone work, with technical evi
 
 ## Verified industry case studies
 
-The [industry project page](industry-projects.html) covers three source-verified Hardhat contributions and the CloudVantage placement overview.
+The [industry project page](industry-projects.html) presents three verified Hardhat contributions, an Azure monitoring lab and a placement dashboard.
 
 | Case study | Evidence |
 | --- | --- |
@@ -30,7 +30,7 @@ The [industry project page](industry-projects.html) covers three source-verified
 
 GitHub [evidence register](docs/hardhat-source-evidence-register.md) distinguishes merged work from unmerged PRs, historical code paths and unverified production claims.
 
-The [CloudVantage logbook evidence register](docs/cloudvantage-logbook-evidence-register.md) maps individual dated entries to the Azure monitoring lab and deployed React/Python task dashboard. The original VS Code source ZIP was also reviewed, with sensitive local configuration and Terraform state excluded from publication. It distinguishes configured features, successful CRUD testing and unverified monitoring outcomes. The upstream code remains in the Hardhat Enterprises team repository.
+The [CloudVantage logbook evidence register](docs/cloudvantage-logbook-evidence-register.md) maps individual dated entries to the Azure monitoring lab and deployed React/Python task dashboard. The dashboard architecture has also been reviewed against its React, Python and Terraform implementation. It distinguishes configured features, successful CRUD testing and unverified monitoring outcomes. The upstream code remains in the Hardhat Enterprises team repository.
 
 ## Featured work
 
