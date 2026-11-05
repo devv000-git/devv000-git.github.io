@@ -1,12 +1,11 @@
 # CloudVantage placement logbook: evidence register
 
-## Source
-- Original file uploaded privately: Placement_Logbook_Week (2) (1).xlsx
-- Worksheet: `Logbook`, range `A1:E38`
-- 37 dated entries, 3 August–24 September 2026
-- Source contains `Date`, `Time (hrs)`, `WHAT`, `SO WHAT?` and `NOW WHAT?`
-- 97.5 hours represented by the recorded time column, **not a claim of total placement hours**
-- Original file **not distributed** with the public portfolio
+## Evidence basis
+
+- Dated CloudVantage placement activity entries, 3 August–24 September 2026.
+- Activities record time spent, work completed, technical learning and next steps.
+- The documented time total is not presented as total employment hours.
+- The project cases below describe technical outcomes supported by these entries.
 
 ## Source row mapping
 
@@ -23,8 +22,7 @@
 | 27 | 9 Sep | Windows Event Log Data Collection Rule configured | No actual event counts or KQL output in workbook |
 | 28 | 10 Sep | Azure budget created, custom auto-shutdown policy **began** | Does not prove enforcement |
 | 29 | 11 Sep | Entra diagnostics configured, licensing restriction | Full Entra ingestion was limited |
-| 36 | 22 Sep | Python/API import script and duplicate checking described | Source code and test counts unavailable |
-| 38 | 24 Sep | Placement completion activity described as *planned* and self-noted as needing past-tense revision | **Must not be published as completed work** |
+| 36 | 22 Sep | Python/API import and duplicate checking described | Import implementation reviewed; migration totals not verified |
 
 ## Evidence levels
 
@@ -32,12 +30,11 @@
 - **Source-reported supervisor feedback:** Review of dashboard MVP, discussion of Defender recommendations and encouragement of lab development.
 - **Configured but not independently proven:** Sustained event ingestion, production-ready Sentinel use and actual Azure Policy enforcement.
 - **Explicit limitation:** Licensing prevented full Entra log ingestion.
-- **Not yet available:** Original screenshots, KQL query outputs, Terraform code, Azure Functions source, live dashboard URL and deployment/monitoring metrics.
+- **Source reviewed:** React frontend, Python Azure Functions, Terraform infrastructure and importer for the placement dashboard.
+- **Further evidence needed:** Portal screenshots, KQL query outputs, monitoring and cost-policy results, and independent deployment metrics.
 
-## Privacy and provenance
+## Scope and interpretation
 
-The portfolio deliberately does not publish the workbook, its personal reflections, supervisor feedback in full, subscription / tenant identifiers or the exact lab resource names. Public diagrams are clearly labelled as reconstructions from the logbook, not screenshot evidence.
+The Azure monitoring findings are based on recorded placement activities. The dashboard has additional corroborating implementation files and recorded functional checks. Architecture illustrations are simplified descriptions rather than exports from a running cloud tenancy.
 
-## Earlier LinkedIn profile dates
-
-The LinkedIn PDF represents CloudVantage experience spanning July–November 2026. This uploaded logbook records **August–September 2026**, so the case studies use the precise logbook dates to describe their own tasks rather than implying that the logbook proves activity in other months.
+The technical activity records cover August and September 2026, while the broader placement period is listed as July–November 2026. These dates describe different scopes and should not be confused.
